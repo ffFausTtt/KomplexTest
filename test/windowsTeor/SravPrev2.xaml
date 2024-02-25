@@ -1,0 +1,185 @@
+﻿<Window x:Class="test.windowsTeor.SravPrev2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:test.windowsTeor"
+        mc:Ignorable="d"
+       Icon="/img/иконка.ico"
+        Title="enGuide" WindowState="Maximized" DataContext ="{Binding RelativeSource={RelativeSource Mode=Self}}">
+    <Grid Background="{Binding bg}">
+        <ScrollViewer>
+            <WrapPanel Orientation="Vertical" HorizontalAlignment="Center">
+                <StackPanel Margin="20,10,20,0">
+                    <WrapPanel Orientation="Horizontal" Margin="0,0,0,15" HorizontalAlignment="Center">
+                        <Button x:Name="Chack" Click="Chack_Click" FontSize="{Binding s}" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">На главную</Button>
+                        <Button x:Name="newbg" Click="newbg_Click" FontSize="{Binding s}" Background="Black" Foreground="#ffff00" BorderBrush="White" Margin="50,0,10,0">A</Button>
+                        <Button x:Name="newbg2" Click="newbg2_Click" FontSize="{Binding s}" Background="#99ccff" Foreground="#0f6cbf" BorderBrush="White">A</Button>
+                        <Button x:Name="newsz" Click="newsz_Click" FontSize="{Binding s}" Margin="10,0,10,0" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">A-</Button>
+                        <Button x:Name="newsz2" Click="newsz2_Click" FontSize="{Binding s}" Margin="0,0,10,0" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">A+</Button>
+                        <Button x:Name="oldbg" Click="oldbg_Click" FontSize="{Binding s}" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">R</Button>
+                        <Button Margin="50,0,0,0" x:Name="home" Click="home_Click" FontSize="{Binding s}" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">Перейти к упражнениям</Button>
+                    </WrapPanel>
+                    <ComboBox x:Name="vib" FontSize="{Binding s}" Foreground="{Binding bb}" SelectionChanged="vib_SelectionChanged">
+                        <ComboBoxItem  FontSize="{Binding s}" Foreground="{Binding fg}" Background="{Binding bg}">Степени сравнения</ComboBoxItem>
+                        <ComboBoxItem  FontSize="{Binding s}" Foreground="{Binding fg}" Background="{Binding bg}">Сравнительная степень прилогательных</ComboBoxItem>
+                        <ComboBoxItem  FontSize="{Binding s}" Foreground="{Binding fg}" Background="{Binding bg}">Превосходная степень прилогательных</ComboBoxItem>
+                        <ComboBoxItem  FontSize="{Binding s}" Foreground="{Binding fg}" Background="{Binding bg}">Исключения</ComboBoxItem>
+                    </ComboBox>
+                    <WrapPanel x:Name="srav" Margin="0,0,0,15" Orientation="Vertical" Visibility="{Binding vs1}">
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Comparatives (сравнительная степень прилагательных) + than используется для сравнения людей/предметов/объектов."></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Elephants are bigger than monkeys." FontStyle="Italic"></TextBlock>
+                        <ScrollViewer VerticalScrollBarVisibility="Disabled" CanContentScroll="True" HorizontalScrollBarVisibility="Auto">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,10,0,0" HorizontalAlignment="Center">
+                                    <Border  BorderBrush="{Binding fg}" BorderThickness="1" Width="250">
+                                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Прилагательное" HorizontalAlignment="Center"></TextBlock>
+                                    </Border>
+                                    <Border  BorderBrush="{Binding fg}" BorderThickness="0,1,1,1" Width="250">
+                                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Сравнительная степень" HorizontalAlignment="Center"></TextBlock>
+                                    </Border>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Border  BorderBrush="{Binding fg  }" BorderThickness="1,0,1,1" Width="250">
+                                            <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="small"></TextBlock>
+                                        </Border>
+                                        <Border  BorderBrush="{Binding fg  }" BorderThickness="0,0,1,1" Width="250">
+                                            <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="smaller"></TextBlock>
+                                        </Border>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Border  BorderBrush="{Binding fg  }" BorderThickness="1,0,1,1" Width="250">
+                                            <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="big"></TextBlock>
+                                        </Border>
+                                        <Border  BorderBrush="{Binding fg  }" BorderThickness="0,0,1,1" Width="250">
+                                            <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="bigger"></TextBlock>
+                                        </Border>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Border  BorderBrush="{Binding fg  }" BorderThickness="1,0,1,1" Width="250">
+                                            <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="busy"></TextBlock>
+                                        </Border>
+                                        <Border  BorderBrush="{Binding fg  }" BorderThickness="0,0,1,1" Width="250">
+                                            <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="busier"></TextBlock>
+                                        </Border>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10" HorizontalAlignment="Center">
+                                        <Border  BorderBrush="{Binding fg  }" BorderThickness="1,0,1,1" Width="250">
+                                            <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="popular"></TextBlock>
+                                        </Border>
+                                        <Border  BorderBrush="{Binding fg  }" BorderThickness="0,0,1,1" Width="250">
+                                            <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="more popular"></TextBlock>
+                                        </Border>
+                                    </StackPanel>
+                                </StackPanel>
+                        </ScrollViewer>
+                        <TextBlock Margin="0,0,0,10" TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Односложные и двусложные прилагательные, оканчивающиеся на -y, образуют сравнительную степень путем добавлени -er. Например, old - older (then)"></TextBlock>
+                        <TextBlock Margin="0,0,0,20" TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Некоторые двусложные и все многосложные прилагательные образуют сравнительную степень с помощью more. Например, beautiful - more beautiful (than)"></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Правила правописания" FontWeight="Bold" HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock Margin="0,0,0,10" TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="К односложным прилагательным, оканчивающимся на -e, в сравнительной степени добавляется -r. Например, nice - nicer (than)"></TextBlock>
+                        <TextBlock Margin="0,0,0,10" TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="У односложных прилагательных, оканчивающихся на гласную + согласная, эта согласная удваивается и добавляется -er. Например, thin - thinner (than)"></TextBlock>
+                        <TextBlock Margin="0,0,0,20" TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="В прилагательных, оканчивающихся на согласную + y, y заменяется на i и добавляется -er. Например, funny-funnier (than)"></TextBlock>
+                    </WrapPanel>
+                    <WrapPanel x:Name="prev" Margin="0,0,0,15" Orientation="Vertical" Visibility="{Binding vs2}">
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="The + Superlatives (превосходная степень прилагательных) + of/in используется для сравнения трех и более людей/предметов/объектов."></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="He is the shortest of all. He is the shortest in the class." FontStyle="Italic"></TextBlock>
+                        <ScrollViewer VerticalScrollBarVisibility="Disabled" CanContentScroll="True" HorizontalScrollBarVisibility="Auto">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,10,0,0" HorizontalAlignment="Center">
+                                    <Border  BorderBrush="{Binding fg  }"  BorderThickness="1" Width="250">
+                                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Прилагательное" HorizontalAlignment="Center"></TextBlock>
+                                    </Border>
+                                    <Border  BorderBrush="{Binding fg  }" BorderThickness="0,1,1,1" Width="250">
+                                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Сравнительная степень" HorizontalAlignment="Center"></TextBlock>
+                                    </Border>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <Border  BorderBrush="{Binding fg  }" BorderThickness="1,0,1,1" Width="250">
+                                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="tall"></TextBlock>
+                                    </Border>
+                                    <Border  BorderBrush="{Binding fg  }" BorderThickness="0,0,1,1" Width="250">
+                                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="tallest"></TextBlock>
+                                    </Border>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <Border  BorderBrush="{Binding fg  }" BorderThickness="1,0,1,1" Width="250">
+                                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="tasty"></TextBlock>
+                                    </Border>
+                                    <Border  BorderBrush="{Binding fg  }" BorderThickness="0,0,1,1" Width="250">
+                                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="tastiest"></TextBlock>
+                                    </Border>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <Border  BorderBrush="{Binding fg  }" BorderThickness="1,0,1,1" Width="250">
+                                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="fat"></TextBlock>
+                                    </Border>
+                                    <Border  BorderBrush="{Binding fg  }" BorderThickness="0,0,1,1" Width="250">
+                                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="fattest"></TextBlock>
+                                    </Border>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,10" HorizontalAlignment="Center">
+                                    <Border  BorderBrush="{Binding fg  }" BorderThickness="1,0,1,1" Width="250">
+                                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="interesting"></TextBlock>
+                                    </Border>
+                                    <Border  BorderBrush="{Binding fg  }" BorderThickness="0,0,1,1" Width="250">
+                                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="most interesting"></TextBlock>
+                                    </Border>
+                                </StackPanel>
+                            </StackPanel>
+                        </ScrollViewer>
+                        <TextBlock Margin="0,0,0,10" TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Односложные и двусложные прилагательные, оканчивающиеся на согласную или на -y, образуют превосходную степень путем добавлени -est. Например, fast - fastest"></TextBlock>
+                        <TextBlock Margin="0,0,0,20" TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Некоторые двусложные и все многосложные прилагательные образуют превосходную степень при помощи most. Например, beautiful - most beautiful"></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Правила правописания" FontWeight="Bold" HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock Margin="0,0,0,10" TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="К односложным прилагательным, оканчивающимся на -e, в превосходной степени добавляется -st. Например, nice - nicest"></TextBlock>
+                        <TextBlock Margin="0,0,0,10" TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="У односложных прилагательных, оканчивающихся на краткую гласную + согласная, эта согласная удваивается и добавляется -est. Например, big - biggest"></TextBlock>
+                        <TextBlock Margin="0,0,0,20" TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="В прилагательных, оканчивающихся на согласную + y, y заменяется на i и добавляется -est. Например, happy - happiest"></TextBlock>
+                    </WrapPanel>
+                    <WrapPanel x:Name="iscl" Margin="0,0,0,15" Orientation="Vertical" Visibility="{Binding vs3}">
+                        <ScrollViewer VerticalScrollBarVisibility="Disabled" CanContentScroll="True" HorizontalScrollBarVisibility="Auto">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,10,0,0" HorizontalAlignment="Center">
+                                    <Border  BorderBrush="{Binding fg  }" BorderThickness="1" Width="250">
+                                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Прилагательное" HorizontalAlignment="Center"></TextBlock>
+                                    </Border>
+                                    <Border  BorderBrush="{Binding fg  }" BorderThickness="0,1,1,1" Width="250">
+                                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Сравнительная степень" HorizontalAlignment="Center"></TextBlock>
+                                    </Border>
+                                    <Border  BorderBrush="{Binding fg  }" BorderThickness="0,1,1,1" Width="250">
+                                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Превосходная степень" HorizontalAlignment="Center"></TextBlock>
+                                    </Border>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <Border  BorderBrush="{Binding fg  }" BorderThickness="1,0,1,1" Width="250">
+                                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="good"></TextBlock>
+                                    </Border>
+                                    <Border  BorderBrush="{Binding fg  }" BorderThickness="0,0,1,1" Width="250">
+                                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="better"></TextBlock>
+                                    </Border>
+                                    <Border  BorderBrush="{Binding fg  }" BorderThickness="0,0,1,1" Width="250">
+                                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="best"></TextBlock>
+                                    </Border>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <Border  BorderBrush="{Binding fg  }" BorderThickness="1,0,1,1" Width="250">
+                                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="bad"></TextBlock>
+                                    </Border>
+                                    <Border  BorderBrush="{Binding fg  }" BorderThickness="0,0,1,1" Width="250">
+                                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="worse"></TextBlock>
+                                    </Border>
+                                    <Border  BorderBrush="{Binding fg  }" BorderThickness="0,0,1,1" Width="250">
+                                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="worst"></TextBlock>
+                                    </Border>
+                                </StackPanel>
+                            </StackPanel>
+                        </ScrollViewer>
+                    </WrapPanel>
+                    <WrapPanel Margin="0,0,0,15" Orientation="Vertical" Visibility="{Binding vs4}">
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Есть три степени сравнения прилагательных в английском языке: положительная (positive degree), сравнительная (comparative degree) и превосходная (superlative degree). Положительная степень прилагательного в английском языке — это форма, в которой слово записано в словаре, например, big (большой), small (маленький) или pretty (симпатичный). Положительная степень используется, чтобы сказать, что предмет или человек обладает определенным признаком или качеством. Все прилагательные английский делит на два типа: качественные (qualitative) и относительные (relative). Качественные описывают признак, который может быть более или менее выраженным. Например, «высокий – выше – самый высокий», «хороший – лучше – лучший», «умный – умнее – самый умный». Относительные описывают принадлежность чему либо (французский, библейский), материал, из которого сделан наш предмет (пластмассовый, березовый, куриный); его назначение (бытовой, бальный), места, где объект расположен (настольный, домашний, горный). Они также обозначают признак объекта через отношение ко времени (вечерний, апрельский, поздний). Звучит немного академически, но на самом деле все интуитивно понятно. Сравнительная и превосходная степень прилагательных в английском языке образуется только для качественных прилагательных."></TextBlock>
+                    </WrapPanel>
+                </StackPanel>
+            </WrapPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
+
+

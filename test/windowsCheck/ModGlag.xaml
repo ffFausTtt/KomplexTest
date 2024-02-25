@@ -1,0 +1,27 @@
+﻿<Window x:Class="test.windowsCheck.ModGlag"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:test.windowsCheck"
+        mc:Ignorable="d"
+       Icon="/img/иконка.ico"
+        Title="enGuide" DataContext ="{Binding RelativeSource={RelativeSource Mode=Self}}">
+    <Grid Background="{Binding bg}" >
+        <ScrollViewer>
+            <WrapPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Margin="20,10,20,0">
+                    <WrapPanel Orientation="Vertical" HorizontalAlignment="Center" >
+                        <WrapPanel Orientation="Horizontal">
+                            <TextBlock TextWrapping="Wrap" Foreground="{Binding fg}" FontSize="{Binding s}" Text="You're wrong,try again!"></TextBlock>
+                            <Button Content="Help" Margin="50,0,0,0" Click="Button_Click" FontSize="{Binding s}" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}" Width="80"></Button>
+                        </WrapPanel>
+                    </WrapPanel>
+                    <WrapPanel x:Name="mest"  Orientation="Vertical" Visibility="{Binding vsmest}">
+                        <TextBlock TextWrapping="Wrap" Foreground="{Binding fg}" FontSize="{Binding s}" Text="Глагол can выражает способность/умение. Have to употребляется, чтобы выразить необходимость. May употребляется, чтобы спросить разрешения (официальная форма). Mast употребляется, тогда, когда говорят, что действие должно быть обязательно выполнено."></TextBlock>
+                    </WrapPanel>
+                </StackPanel>
+            </WrapPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

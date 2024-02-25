@@ -1,0 +1,161 @@
+﻿<Window x:Class="test.windowsTask.PritMestTask"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:test.windowsTask"
+        mc:Ignorable="d"
+       Icon="/img/иконка.ico"
+        Title="enGuide" DataContext ="{Binding RelativeSource={RelativeSource Mode=Self}}" WindowState="Maximized">
+    <Grid Background="{Binding bg}">
+        <ScrollViewer>
+            <WrapPanel Orientation="Vertical" HorizontalAlignment="Center">
+                <StackPanel Margin="20,10,20,0">
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,15" HorizontalAlignment="Center" Background="{Binding bg}" Height="70">
+                        <Border Margin="20,0,0,0"  BorderThickness="1,2,1,2" CornerRadius="10,3,10,3" Width="200" Height="40" Background="{Binding bg}" BorderBrush="{Binding bb}">
+                            <Button x:Name="Chack" Click="Chack_Click" FontSize="{Binding s}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{Binding fg}">На главную</Button>
+                        </Border>
+                        <Button Height="40" Width="40" x:Name="newbg" Click="newbg_Click" FontSize="{Binding s}" Background="Black" Foreground="#ffff00" BorderBrush="White" Margin="50,0,10,0">A</Button>
+                        <Button Height="40" Width="40" x:Name="newbg2" Click="newbg2_Click" FontSize="{Binding s}" Background="#99ccff" Foreground="#0f6cbf" BorderBrush="White">A</Button>
+                        <Button Height="40" Width="40" x:Name="newsz" Click="newsz_Click" FontSize="{Binding s}" Margin="10,0,10,0" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">A-</Button>
+                        <Button Height="40" Width="40" x:Name="newsz2" Click="newsz2_Click" FontSize="{Binding s}" Margin="0,0,10,0" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">A+</Button>
+                        <Button Height="40" Width="40" x:Name="oldbg" Click="oldbg_Click" FontSize="{Binding s}" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">R</Button>
+                        <Border Margin="50,0,0,0"  BorderThickness="1,2,1,2" CornerRadius="10,3,10,3" Width="300" Height="40" Background="{Binding bg}" BorderBrush="{Binding bb}">
+                            <Button  x:Name="home" Click="home_Click" FontSize="{Binding s}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{Binding fg}">Вернуться к правилу</Button>
+                        </Border>
+                    </StackPanel>
+
+
+                    <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,10,0,10">
+                        <Border BorderBrush="{Binding bb}" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                            <TextBlock Text="1" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{Binding fg}" FontSize="{Binding s}"/>
+                        </Border>
+                        <WrapPanel Orientation="Vertical" VerticalAlignment="Center">
+                            <WrapPanel>
+                                <TextBlock TextWrapping="Wrap" Text="Read and choose" Foreground="{Binding fg}" FontSize="{Binding s}"></TextBlock>
+                                <Button Content="Сheck " Margin="50,0,0,0" Click="Button_Click_1" FontSize="{Binding s}" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}" Width="100"></Button>
+                            </WrapPanel>
+                        </WrapPanel>
+                    </WrapPanel>
+                    <WrapPanel Orientation="Vertical">
+                        <WrapPanel Orientation="Horizontal" Margin="0,0,0,5" VerticalAlignment="Center">
+                            <TextBlock Width="200" TextWrapping="Wrap" Text="Is this bag" Foreground="{Binding fg}" FontSize="{Binding s}" ></TextBlock>
+                            <RadioButton Width="100" x:Name="z2v1" FontSize="{Binding s}" Content="yours" Foreground="{Binding fg}"/>
+                            <RadioButton Width="100" x:Name="z2v2" FontSize="{Binding s}" Content="your" Foreground="{Binding fg}"/>
+                            <TextBlock TextWrapping="Wrap" Text="?" Foreground="{Binding fg}" FontSize="{Binding s}" ></TextBlock>
+                        </WrapPanel>
+                        <WrapPanel Orientation="Horizontal" Margin="0,0,0,5">
+                            <TextBlock Width="200" TextWrapping="Wrap" Text="I like" Foreground="{Binding fg}" FontSize="{Binding s}" ></TextBlock>
+                            <RadioButton Width="100" x:Name="z2v3" FontSize="{Binding s}" Content="my" Foreground="{Binding fg}"/>
+                            <RadioButton Width="100" x:Name="z2v4" FontSize="{Binding s}" Content="mine" Foreground="{Binding fg}"/>
+                            <TextBlock TextWrapping="Wrap" Text="English teacher very much." Foreground="{Binding fg}" FontSize="{Binding s}"></TextBlock>
+                        </WrapPanel>
+                        <WrapPanel Orientation="Horizontal" Margin="0,0,0,5">
+                            <TextBlock Width="200" TextWrapping="Wrap" Text="He makes" Foreground="{Binding fg}" FontSize="{Binding s}" ></TextBlock>
+                            <RadioButton Width="100" x:Name="z2v5" FontSize="{Binding s}" Content="him" Foreground="{Binding fg}"/>
+                            <RadioButton Width="100" x:Name="z2v6" FontSize="{Binding s}" Content="his" Foreground="{Binding fg}"/>
+                            <TextBlock TextWrapping="Wrap" Text="bed every day." Foreground="{Binding fg}" FontSize="{Binding s}"></TextBlock>
+                        </WrapPanel>
+                        <WrapPanel Orientation="Horizontal" Margin="0,0,0,5">
+                            <TextBlock Width="200" TextWrapping="Wrap" Text="Where are" Foreground="{Binding fg}" FontSize="{Binding s}" ></TextBlock>
+                            <RadioButton Width="100" x:Name="z2v7" FontSize="{Binding s}" Content="yours" Foreground="{Binding fg}"/>
+                            <RadioButton Width="100" x:Name="z2v8" FontSize="{Binding s}" Content="your" Foreground="{Binding fg}"/>
+                            <TextBlock TextWrapping="Wrap" Text="keys?" Foreground="{Binding fg}" FontSize="{Binding s}"></TextBlock>
+                        </WrapPanel>
+                        <WrapPanel Orientation="Horizontal" Margin="0,0,0,5">
+                            <RadioButton Width="100" x:Name="z2v9" FontSize="{Binding s}" Content="Our" Foreground="{Binding fg}"/>
+                            <RadioButton Width="100" x:Name="z2v0" FontSize="{Binding s}" Content="ours" Foreground="{Binding fg}"/>
+                            <TextBlock TextWrapping="Wrap" Text="house is very modern and large." Foreground="{Binding fg}" FontSize="{Binding s}"></TextBlock>
+                        </WrapPanel>
+                    </WrapPanel>
+
+
+                    <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,10,0,10">
+                        <Border BorderBrush="{Binding bb}" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                            <TextBlock Text="2" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{Binding fg}" FontSize="{Binding s}"/>
+                        </Border>
+                        <WrapPanel Orientation="Vertical" VerticalAlignment="Center">
+                            <WrapPanel>
+                                <TextBlock TextWrapping="Wrap" Text="Make sentences" Foreground="{Binding fg}" FontSize="{Binding s}"></TextBlock>
+                                <Button Content="Сheck" Margin="50,0,0,0" Click="Button_Click_5" FontSize="{Binding s}" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}" Width="100"></Button>
+                            </WrapPanel>
+                        </WrapPanel>
+                    </WrapPanel>
+                    <WrapPanel Orientation="Vertical" VerticalAlignment="Center">
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock Width="300" TextWrapping="Wrap" Text="I have a brother and a sister." Foreground="{Binding fg}" FontSize="{Binding s}" ></TextBlock>
+                            <TextBox FontSize="{Binding s}" Width="100" Margin="10,0,10,0" x:Name="z3v1" Foreground="{Binding fg}" Background="{Binding bg}" BorderBrush="{Binding fg}"></TextBox>
+                            <TextBlock Foreground="{Binding fg}" Margin="30,0,0,0" FontSize="{Binding s}" Text="names are John and Lily."></TextBlock>
+                        </WrapPanel>
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,4,0,0">
+                            <TextBlock Width="300" TextWrapping="Wrap" Text="We have a house." Foreground="{Binding fg}" FontSize="{Binding s}" ></TextBlock>
+                            <TextBox FontSize="{Binding s}" Width="100" Margin="10,0,10,0" x:Name="z3v2" Foreground="{Binding fg}" Background="{Binding bg}" BorderBrush="{Binding fg}"></TextBox>
+                            <TextBlock Foreground="{Binding fg}" Margin="30,0,0,0"  FontSize="{Binding s}" Text="house is big."></TextBlock>
+                        </WrapPanel>
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,4,0,0">
+                            <TextBlock Width="300" TextWrapping="Wrap" Text="He has a car." Foreground="{Binding fg}" FontSize="{Binding s}" ></TextBlock>
+                            <TextBox FontSize="{Binding s}" Width="100" Margin="10,0,10,0" x:Name="z3v3" Foreground="{Binding fg}" Background="{Binding bg}" BorderBrush="{Binding fg}"></TextBox>
+                            <TextBlock Foreground="{Binding fg}" Margin="30,0,0,0" FontSize="{Binding s}" Text="car is new."></TextBlock>
+                        </WrapPanel>
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,4,0,0">
+                            <TextBlock Width="300" TextWrapping="Wrap" Text="This is my aunt." Foreground="{Binding fg}" FontSize="{Binding s}" ></TextBlock>
+                            <TextBox FontSize="{Binding s}" Width="100" Margin="10,0,10,0" x:Name="z3v4" Foreground="{Binding fg}" Background="{Binding bg}" BorderBrush="{Binding fg}"></TextBox>
+                            <TextBlock Foreground="{Binding fg}" Margin="30,0,0,0" FontSize="{Binding s}" Text="name is Jill."></TextBlock>
+                        </WrapPanel>
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,4,0,0">
+                            <TextBlock Width="300" TextWrapping="Wrap" Text="This is my brother." Foreground="{Binding fg}" FontSize="{Binding s}" ></TextBlock>
+                            <TextBox FontSize="{Binding s}" Width="100" Margin="10,0,10,0" x:Name="z3v5" Foreground="{Binding fg}" Background="{Binding bg}" BorderBrush="{Binding fg}"></TextBox>
+                            <TextBlock Foreground="{Binding fg}" Margin="30,0,0,0" FontSize="{Binding s}" Text="name's Fred."></TextBlock>
+                        </WrapPanel>
+                    </WrapPanel>
+
+                    <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,10,0,10">
+                        <Border BorderBrush="{Binding bb}" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                            <TextBlock Text="3" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{Binding fg}" FontSize="{Binding s}"/>
+                        </Border>
+                        <WrapPanel Orientation="Vertical" VerticalAlignment="Center">
+                            <WrapPanel>
+                                <TextBlock TextWrapping="Wrap" Text="Read and choose" Foreground="{Binding fg}" FontSize="{Binding s}"></TextBlock>
+                                <Button Content="Сheck " Margin="50,0,0,0" Click="Button_Click" FontSize="{Binding s}" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}" Width="100"></Button>
+                            </WrapPanel>
+                        </WrapPanel>
+                    </WrapPanel>
+                    <WrapPanel Orientation="Vertical" VerticalAlignment="Center">
+                        <WrapPanel Orientation="Horizontal">
+                            <TextBlock Width="200" Foreground="{Binding fg}" FontSize="{Binding s}" Text="Lisa's"></TextBlock>
+                            <ComboBox x:Name="vib1" FontSize="{Binding s}" Background="{Binding bg}" Foreground="{Binding fg}" Width="100" Margin="0,5,0,0">
+                                <ComboBoxItem  FontSize="{Binding s}" Foreground="{Binding fg}" Background="{Binding bg}">his</ComboBoxItem>
+                                <ComboBoxItem  FontSize="{Binding s}" Foreground="{Binding fg}" Background="{Binding bg}">her</ComboBoxItem>
+                                <ComboBoxItem  FontSize="{Binding s}" Foreground="{Binding fg}" Background="{Binding bg}">their</ComboBoxItem>
+                            </ComboBox>
+                        </WrapPanel>
+                        <WrapPanel Orientation="Horizontal">
+                            <TextBlock  Width="200" Foreground="{Binding fg}" FontSize="{Binding s}" Text="Tim's"></TextBlock>
+                            <ComboBox x:Name="vib2" FontSize="{Binding s}" Background="{Binding bg}" Foreground="{Binding fg}" Width="100" Margin="0,5,0,0">
+                                <ComboBoxItem  FontSize="{Binding s}" Foreground="{Binding fg}" Background="{Binding bg}">his</ComboBoxItem>
+                                <ComboBoxItem  FontSize="{Binding s}" Foreground="{Binding fg}" Background="{Binding bg}">her</ComboBoxItem>
+                                <ComboBoxItem  FontSize="{Binding s}" Foreground="{Binding fg}" Background="{Binding bg}">their</ComboBoxItem>
+                            </ComboBox>
+                        </WrapPanel>
+                        <WrapPanel Orientation="Horizontal">
+                            <TextBlock  Width="200" Foreground="{Binding fg}" FontSize="{Binding s}" Text="Tom and Jerry's"></TextBlock>
+                            <ComboBox x:Name="vib3" FontSize="{Binding s}" Background="{Binding bg}" Foreground="{Binding fg}" Width="100" Margin="0,5,0,0">
+                                <ComboBoxItem  FontSize="{Binding s}" Foreground="{Binding fg}" Background="{Binding bg}">his</ComboBoxItem>
+                                <ComboBoxItem  FontSize="{Binding s}" Foreground="{Binding fg}" Background="{Binding bg}">her</ComboBoxItem>
+                                <ComboBoxItem  FontSize="{Binding s}" Foreground="{Binding fg}" Background="{Binding bg}">their</ComboBoxItem>
+                            </ComboBox>
+                        </WrapPanel>
+                        <WrapPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock  Width="200" Foreground="{Binding fg}" FontSize="{Binding s}" Text="my sister's"></TextBlock>
+                            <ComboBox x:Name="vib4" FontSize="{Binding s}" Background="{Binding bg}" Foreground="{Binding fg}" Width="100" Margin="0,5,0,0">
+                                <ComboBoxItem  FontSize="{Binding s}" Foreground="{Binding fg}" Background="{Binding bg}">his</ComboBoxItem>
+                                <ComboBoxItem  FontSize="{Binding s}" Foreground="{Binding fg}" Background="{Binding bg}">her</ComboBoxItem>
+                                <ComboBoxItem  FontSize="{Binding s}" Foreground="{Binding fg}" Background="{Binding bg}">their</ComboBoxItem>
+                            </ComboBox>
+                        </WrapPanel>
+                    </WrapPanel>
+                </StackPanel>
+            </WrapPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

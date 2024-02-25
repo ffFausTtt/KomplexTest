@@ -1,0 +1,280 @@
+﻿<Page x:Class="test.pages.Var4"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:test.pages"
+      mc:Ignorable="d" d:DesignHeight="900" d:DesignWidth="1350"
+      Title="Демонстрационный варинт ВПР по английскому языку 4 класс" DataContext ="{Binding RelativeSource={RelativeSource Mode=Self}}">
+    <Grid>
+        <ScrollViewer>
+            <WrapPanel Orientation="Vertical" Background="{Binding bg}">
+                <StackPanel Margin="20,10,20,0">
+                    <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="Chack" Click="Chack_Click" FontSize="{Binding s}" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">Закончить попытку</Button>
+                            <Button x:Name="newbg" Click="newbg_Click" FontSize="{Binding s}" Background="Black" Foreground="#ffff00" BorderBrush="White" Margin="50,0,10,0">A</Button>
+                            <Button x:Name="newbg2" Click="newbg2_Click" FontSize="{Binding s}" Background="#99ccff" Foreground="#0f6cbf" BorderBrush="White">A</Button>
+                            <Button x:Name="newsz" Click="newsz_Click" FontSize="{Binding s}" Margin="10,0,10,0" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">A-</Button>
+                            <Button x:Name="newsz2" Click="newsz2_Click" FontSize="{Binding s}" Margin="0,0,10,0" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">A+</Button>
+                            <Button x:Name="oldbg" Click="oldbg_Click" FontSize="{Binding s}" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">R</Button>
+                            <TextBlock Margin="50,0,5,0" Text="До окончания времени работы осталось:" FontSize="{Binding s}" Foreground="{Binding fg}"/>
+                            <TextBlock Text="{Binding StringCountdown}" FontSize="{Binding s}" Foreground="{Binding fg}"/>
+                            <Button Margin="50,0,0,0" x:Name="home" Click="home_Click" FontSize="{Binding s}" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}" >На главную</Button>
+                        <Button  x:Name="var" Click="var_Click" FontSize="{Binding s}" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}" Margin="10,0,0,0">К выбору варианта</Button>
+                    </WrapPanel>
+                    <TextBlock FontWeight="Bold" FontSize="{Binding s}" HorizontalAlignment="Center" Margin="0,30,0,30" Foreground="{Binding fg}">Раздел 1. АУДИРОВАНИЕ</TextBlock>
+                <Border BorderBrush="{Binding fg}" BorderThickness="1" Padding="5,5,5,5" Margin="0,0,0,10">
+                    <WrapPanel Orientation="Horizontal">
+                            <TextBlock TextWrapping="Wrap" VerticalAlignment="Center"  FontStyle="Italic" FontWeight="Bold" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Прослушайте текст и выбрерите правильное утверждение. Ты услышишь запись дважды."></TextBlock>
+                        <Image Source="{Binding img}" Width="70" Height="70" MouseDown="Image_MouseDown" Margin="50,0,0,0"></Image>
+                    </WrapPanel>
+                </Border>
+                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0">
+                    <Border BorderBrush="{Binding bb}" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                            <TextBlock Text="1" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{Binding fg}" FontSize="{Binding s}"/>
+                    </Border>
+                    <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <RadioButton x:Name="z1v1" FontSize="{Binding s}" Content="Linda is ten." Foreground="{Binding fg}"/>
+                            <RadioButton x:Name="z1v2" FontSize="{Binding s}" Content="Linda is nine." Margin="50,0,0,0" Foreground="{Binding fg}"/>
+                    </WrapPanel>
+                </WrapPanel>
+                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                    <Border BorderBrush="{Binding bb}" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                            <TextBlock Text="2" Foreground="{Binding fg}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}"/>
+                    </Border>
+                    <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <RadioButton x:Name="z2v1" FontSize="{Binding s}" Content="Linda lives in London." Foreground="{Binding fg}"/>
+                            <RadioButton x:Name="z2v2" FontSize="{Binding s}" Content="Linda lives in Edinburgh." Margin="50,0,0,0" Foreground="{Binding fg}"/>
+                    </WrapPanel>
+                </WrapPanel>
+                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Border BorderBrush="{Binding bb}" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                            <TextBlock Text="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}" Foreground="{Binding fg}"/>
+                    </Border>
+                    <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <RadioButton x:Name="z3v1" FontSize="{Binding s}" Content="Linda likes tennis." Foreground="{Binding fg}"/>
+                            <RadioButton x:Name="z3v2" FontSize="{Binding s}" Content="Linda is good at basketball." Margin="50,0,0,0" Foreground="{Binding fg}"/>
+                    </WrapPanel>
+                </WrapPanel>
+                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Border BorderBrush="{Binding bb}" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                            <TextBlock Text="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}" Foreground="{Binding fg}"/>
+                    </Border>
+                    <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <RadioButton x:Name="z4v1" FontSize="{Binding s}" Content="Irene lives in New York." Foreground="{Binding fg}"/>
+                            <RadioButton x:Name="z4v2" FontSize="{Binding s}" Content=" Irene lives in London." Margin="50,0,0,0" Foreground="{Binding fg}"/>
+                    </WrapPanel>
+                </WrapPanel>
+
+
+
+
+                    <TextBlock FontWeight="Bold" FontSize="{Binding s}" HorizontalAlignment="Center" Margin="0,30,0,30" Foreground="{Binding fg}">Раздел 2. ЧТЕНИЕ</TextBlock>
+                <Border BorderBrush="{Binding fg}" BorderThickness="1" Padding="5,5,5,5" Margin="0,0,0,10">
+                        <TextBlock Foreground="{Binding fg}" TextWrapping="Wrap" FontStyle="Italic" FontWeight="Bold" FontSize="{Binding s}" Text="Прочитай текст. Определи, какие из приведенных ниже утверждений 5–7 соответствуют его содержанию (1–True), а какие не соответствуют (2–False)."></TextBlock>
+                </Border>
+                    <TextBlock FontSize="{Binding s}" TextWrapping="Wrap" Margin="0,0,0,10" Foreground="{Binding fg}">
+                    There are a lot of different places to live: cities, towns, villages. Richard lives in London. He likes living here. «The life in a large city is not boring»-he says. There are a lot of interesting historical places, libraries, theatres, cinemas and museums. He thinks the life in the city is more exciting than in a small town or a village.  Richard’s cousin Perry lives in the village. He doesn’t want to live in a large city. He likes beautiful forests and lakes. He can enjoy nature. He thinks the life in the country is better than life in the city.
+                </TextBlock>
+                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                    <Border BorderBrush="{Binding bb}" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                            <TextBlock Text="5" Foreground="{Binding fg}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}"/>
+                    </Border>
+                    <WrapPanel Orientation="Vertical">
+                            <TextBlock Foreground="{Binding fg}" Text="Richard lives in the city." FontSize="{Binding s}"></TextBlock>
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <RadioButton x:Name="z5v1" Content="True" Margin="0,0,50,0" FontSize="{Binding s}" Foreground="{Binding fg}"></RadioButton>
+                                <RadioButton x:Name="z5v2" Content="False" FontSize="{Binding s}" Foreground="{Binding fg}"></RadioButton>
+                        </WrapPanel>
+                    </WrapPanel>
+                </WrapPanel>
+
+                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                    <Border BorderBrush ="{Binding bb}" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                            <TextBlock Text="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}" Foreground="{Binding fg}"/>
+                    </Border>
+                    <WrapPanel Orientation="Vertical">
+                            <TextBlock Text="Richard doesn't like the life in the city." FontSize="{Binding s}" Foreground="{Binding fg}"></TextBlock>
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <RadioButton x:Name="z6v1" Content="True" Margin="0,0,50,0" FontSize="{Binding s}" Foreground="{Binding fg}"></RadioButton>
+                                <RadioButton x:Name="z6v2" Content="False" FontSize="{Binding s}" Foreground="{Binding fg}"></RadioButton>
+                        </WrapPanel>
+                    </WrapPanel>
+                </WrapPanel>
+
+                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                    <Border BorderBrush="{Binding bb}" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                            <TextBlock Text="7" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}" Foreground="{Binding fg}"/>
+                    </Border>
+                    <WrapPanel Orientation="Vertical">
+                            <TextBlock Text="Perry is Richard's friend." FontSize="{Binding s}" Foreground="{Binding fg}"></TextBlock>
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <RadioButton  x:Name="z7v1" Content="True" Margin="0,0,50,0" FontSize="{Binding s}" Foreground="{Binding fg}"></RadioButton>
+                                <RadioButton  x:Name="z7v2" Content="False" FontSize="{Binding s}" Foreground="{Binding fg}"></RadioButton>
+                        </WrapPanel>
+                    </WrapPanel>
+                </WrapPanel>
+
+                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Border BorderBrush="{Binding bb}" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                            <TextBlock Text="8" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}" Foreground="{Binding fg}"/>
+                    </Border>
+                    <WrapPanel Orientation="Vertical">
+                            <TextBlock Text="Perry loves nature." FontSize="{Binding s}" Foreground="{Binding fg}"></TextBlock>
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <RadioButton  x:Name="z8v1" Content="True" Margin="0,0,50,0" FontSize="{Binding s}" Foreground="{Binding fg}"></RadioButton>
+                                <RadioButton  x:Name="z8v2" Content="False" FontSize="{Binding s}" Foreground="{Binding fg}"></RadioButton>
+                        </WrapPanel>
+                    </WrapPanel>
+                </WrapPanel>
+
+
+                    <TextBlock Foreground="{Binding fg}" FontWeight="Bold" FontSize="{Binding s}" HorizontalAlignment="Center" Margin="0,30,0,30">Раздел 3. ЛЕКСИКА И ГРАММАТИКА</TextBlock>
+
+                <Border BorderBrush="{Binding fg}" BorderThickness="1" Padding="5,5,5,5" Margin="0,0,0,10">
+                        <TextBlock TextWrapping="Wrap" Foreground="{Binding fg}" FontStyle="Italic" FontWeight="Bold" FontSize="{Binding s}" Text="В предложениях 9–15 заполни пропуски, выбрав подходящий ответ из трёх предложенных."></TextBlock>
+                </Border>
+
+                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                    <Border BorderBrush="{Binding bb}" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                            <TextBlock Text="9" Foreground="{Binding fg}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}"/>
+                    </Border>
+                    <WrapPanel Orientation="Vertical">
+                            <TextBlock Foreground="{Binding fg}" Text="July is _______ summer month." FontSize="{Binding s}"></TextBlock>
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <RadioButton x:Name="z9v1" Content="second"  FontSize="{Binding s}" Foreground="{Binding fg}"></RadioButton>
+                                <RadioButton x:Name="z9v2" Content="a second" FontSize="{Binding s}" Margin="50,0,50,0" Foreground="{Binding fg}"></RadioButton>
+                                <RadioButton x:Name="z9v3" Content="the second" FontSize="{Binding s}" Foreground="{Binding fg}"></RadioButton>
+                        </WrapPanel>
+                    </WrapPanel>
+                </WrapPanel>
+
+                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                    <Border BorderBrush="{Binding bb}" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                            <TextBlock Foreground="{Binding fg}" Text="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}"/>
+                    </Border>
+                    <WrapPanel Orientation="Vertical">
+                            <TextBlock Foreground="{Binding fg}" Text="English people celebrate Christmas _____ the 25th of December." FontSize="{Binding s}"></TextBlock>
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <RadioButton Foreground="{Binding fg}" x:Name="z10v1" Content="at"  FontSize="{Binding s}"></RadioButton>
+                                <RadioButton Foreground="{Binding fg}" x:Name="z10v2" Content="in" FontSize="{Binding s}" Margin="50,0,50,0"></RadioButton>
+                                <RadioButton Foreground="{Binding fg}" x:Name="z10v3" Content="on" FontSize="{Binding s}"></RadioButton>
+                        </WrapPanel>
+                    </WrapPanel>
+                </WrapPanel>
+
+                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                    <Border BorderBrush="{Binding bb}" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                            <TextBlock Foreground="{Binding fg}" Text="11" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}"/>
+                    </Border>
+                    <WrapPanel Orientation="Vertical">
+                            <TextBlock Foreground="{Binding fg}" Text=" There ______ no milk in the glass." FontSize="{Binding s}"></TextBlock>
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <RadioButton Foreground="{Binding fg}" x:Name="z11v1" Content="can"  FontSize="{Binding s}"></RadioButton>
+                                <RadioButton Foreground="{Binding fg}" x:Name="z11v2" Content="are" FontSize="{Binding s}" Margin="50,0,50,0"></RadioButton>
+                                <RadioButton Foreground="{Binding fg}" x:Name="z11v3" Content="is" FontSize="{Binding s}"></RadioButton>
+                        </WrapPanel>
+                    </WrapPanel>
+                </WrapPanel>
+
+                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                    <Border BorderBrush="{Binding bb}" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                            <TextBlock Foreground="{Binding fg}" Text="12" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}"/>
+                    </Border>
+                    <WrapPanel Orientation="Vertical">
+                            <TextBlock Foreground="{Binding fg}" Text="Jack ________ lunch at school yesterday." FontSize="{Binding s}"></TextBlock>
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <RadioButton Foreground="{Binding fg}" x:Name="z12v1" Content="has"  FontSize="{Binding s}"></RadioButton>
+                                <RadioButton Foreground="{Binding fg}" x:Name="z12v2" Content="will have" FontSize="{Binding s}" Margin="50,0,50,0"></RadioButton>
+                                <RadioButton Foreground="{Binding fg}" x:Name="z12v3" Content="had" FontSize="{Binding s}"></RadioButton>
+                        </WrapPanel>
+                    </WrapPanel>
+                </WrapPanel>
+
+                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                    <Border BorderBrush="{Binding bb}" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                            <TextBlock Foreground="{Binding fg}" Text="13" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}"/>
+                    </Border>
+                    <WrapPanel Orientation="Vertical">
+                            <TextBlock Foreground="{Binding fg}" Text="I think Mary is ________ than Jane." FontSize="{Binding s}"></TextBlock>
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <RadioButton Foreground="{Binding fg}" x:Name="z13v1" Content="clever"  FontSize="{Binding s}"></RadioButton>
+                                <RadioButton  Foreground="{Binding fg}" x:Name="z13v2" Content="cleverer" FontSize="{Binding s}" Margin="50,0,50,0"></RadioButton>
+                                <RadioButton  Foreground="{Binding fg}" x:Name="z13v3" Content="the cleverest" FontSize="{Binding s}"></RadioButton>
+                        </WrapPanel>
+                    </WrapPanel>
+                </WrapPanel>
+                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                    <Border BorderBrush="{Binding bb}" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                            <TextBlock Foreground="{Binding fg}" Text="14" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}"/>
+                    </Border>
+                    <WrapPanel Orientation="Vertical">
+                            <TextBlock Foreground="{Binding fg}" Text=" ______ book is more interesting than that one." FontSize="{Binding s}"></TextBlock>
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <RadioButton Foreground="{Binding fg}" x:Name="z14v1" Content="That"  FontSize="{Binding s}"></RadioButton>
+                                <RadioButton  Foreground="{Binding fg}" x:Name="z14v2" Content="This" FontSize="{Binding s}" Margin="50,0,50,0"></RadioButton>
+                                <RadioButton  Foreground="{Binding fg}" x:Name="z14v3" Content="Those" FontSize="{Binding s}"></RadioButton>
+                        </WrapPanel>
+                    </WrapPanel>
+                </WrapPanel>
+                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                    <Border BorderBrush="{Binding bb}" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                            <TextBlock Foreground="{Binding fg}" Text="15" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}"/>
+                    </Border>
+                    <WrapPanel Orientation="Vertical">
+                            <TextBlock Foreground="{Binding fg}" Text="Would you like ______ juice?" FontSize="{Binding s}"></TextBlock>
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <RadioButton Foreground="{Binding fg}" x:Name="z15v1" Content="some"  FontSize="{Binding s}"></RadioButton>
+                                <RadioButton  Foreground="{Binding fg}" x:Name="z15v2" Content="no" FontSize="{Binding s}" Margin="50,0,50,0"></RadioButton>
+                                <RadioButton  Foreground="{Binding fg}" x:Name="z15v3" Content="any" FontSize="{Binding s}"></RadioButton>
+                        </WrapPanel>
+                    </WrapPanel>
+                </WrapPanel>
+
+                <Border BorderBrush="{Binding fg}" BorderThickness="1" Padding="5,5,5,5" Margin="0,0,0,10">
+                        <TextBlock Foreground="{Binding fg}" TextWrapping="Wrap" FontStyle="Italic" FontWeight="Bold" FontSize="{Binding s}" Text="Прочитай текст. Заполни пропуски подходящими предлогами, данными в списке 1–5. Перенеси номера выбранных слов в ячейку."></TextBlock>
+                </Border>
+                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Border BorderBrush="{Binding bb}" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                            <TextBlock Foreground="{Binding fg}" Text="16" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}"/>
+                    </Border>
+                        <TextBlock VerticalAlignment="Center" Foreground="{Binding fg}" Text="1) in    2 ) of    3) to    4) on    5) -" FontSize="{Binding s}"></TextBlock>
+                </WrapPanel>
+
+                <WrapPanel Orientation="Horizontal">
+                        <TextBlock Foreground="{Binding fg}" FontSize="{Binding s}" TextWrapping="Wrap">
+                       My name is Jack Brown. I am from  Great Britain. My birthday is on the 17th
+                    </TextBlock>
+                        <TextBox MouseDoubleClick="z16v1_MouseDoubleClick" FontSize="{Binding s}" Foreground="{Binding fg}" Background="{Binding bg}" BorderBrush="{Binding fg}"  Width="50" Margin="10,0,10,0" x:Name="z16v1"></TextBox>
+                        <TextBlock Foreground="{Binding fg}" FontSize="{Binding s}" TextWrapping="Wrap">
+                        April. I am ten years old and I go
+                    </TextBlock>
+                        <TextBox FontSize="{Binding s}" Width="50" Margin="0,0,10,0" x:Name="z16v2" Foreground="{Binding fg}" Background="{Binding bg}" BorderBrush="{Binding fg}"></TextBox>
+                </WrapPanel>
+                <WrapPanel Orientation="Horizontal">
+                        <TextBlock Foreground="{Binding fg}" FontSize="{Binding s}" TextWrapping="Wrap">
+                        school.
+                    </TextBlock>
+                        <TextBox FontSize="{Binding s}" Width="50" Margin="10,0,10,0" x:Name="z16v3" Foreground="{Binding fg}" Background="{Binding bg}" BorderBrush="{Binding fg}"></TextBox>
+                        <TextBlock Foreground="{Binding fg}" FontSize="{Binding s}" TextWrapping="Wrap">
+                        Saturdays and Sundays I like to play
+                    </TextBlock>
+                </WrapPanel>
+                <WrapPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Foreground="{Binding fg}" FontSize="{Binding s}" TextWrapping="Wrap">
+                        very much. It was very
+                    </TextBlock>
+                        <TextBox FontSize="{Binding s}" Width="50" Margin="10,0,10,0" x:Name="z16v4" Foreground="{Binding fg}" Background="{Binding bg}" BorderBrush="{Binding fg}"></TextBox>
+                        <TextBlock Foreground="{Binding fg}" FontSize="{Binding s}" TextWrapping="Wrap">
+                        tennis or to swim
+                    </TextBlock>
+                        <TextBox FontSize="{Binding s}" Width="50" Margin="10,0,10,0" x:Name="z16v5" Foreground="{Binding fg}" Background="{Binding bg}" BorderBrush="{Binding fg}"></TextBox>
+                        <TextBlock Foreground="{Binding fg}" FontSize="{Binding s}" TextWrapping="Wrap">
+                         the swimming pool.
+                    </TextBlock>
+                </WrapPanel>
+            </StackPanel>
+            </WrapPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

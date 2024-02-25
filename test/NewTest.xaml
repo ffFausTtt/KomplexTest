@@ -1,0 +1,381 @@
+﻿<Window x:Class="test.NewTest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:test"
+        mc:Ignorable="d"
+        Icon="img/иконка.ico"
+        Title="enGuide" WindowState="Maximized" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+        </Style>
+    </Window.Resources>
+    <Grid x:Name="Griddd">
+        <ScrollViewer>
+            <WrapPanel Orientation="Vertical" Margin="20,10,0,10">
+                <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                    <Border BorderBrush="#FFFF8000" Margin="0,0,0,10"  BorderThickness="1,2,1,2" CornerRadius="10,3,10,3" Width="200" Height="40" Background="#FFFF8000">
+                        <Button x:Name="Save" Click="Save_Click" Background="{x:Null}" BorderBrush="{x:Null}" >Сохранить тест</Button>
+                        </Border>
+                    <Border Margin="50,0,0,10" BorderBrush="#FFFF8000"  BorderThickness="1,2,1,2" CornerRadius="10,3,10,3" Width="200" Height="40" Background="#FFFF8000">
+                        <Button  x:Name="Back" Click="Back_Click" Background="{x:Null}" BorderBrush="{x:Null}">На главную</Button>
+                    </Border>
+                </WrapPanel>
+
+                <WrapPanel Orientation="Horizontal" >
+                    <WrapPanel Orientation="Vertical" x:Name="List" Width="900">
+                        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="List1" Margin="0,0,0,4">
+                            <TextBlock FontWeight="Bold" Margin="0,0,30,0">Раздел АУДИРОВАНИЕ</TextBlock>
+                            <Button x:Name="del0" Content="Убрать данный раздел" Click="del0_Click"></Button>
+                        </WrapPanel>
+                        <Border BorderBrush="Black"  BorderThickness="1" Padding="2,2,2,2" Margin="0,0,0,4">
+                            <TextBlock TextWrapping="Wrap" FontStyle="Italic"  FontWeight="Bold" Text="Прослушай текст. Закончи предложения 1–4, выбрав из предложенных вариантов тот, который соответствует содержанию текста. Ты услышишь запись дважды."></TextBlock>
+                        </Border>
+                        <TextBox TextWrapping="Wrap" Margin="0,0,0,4" MouseDoubleClick="TextBox_MouseDown"></TextBox>
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
+                            <TextBlock Text="1" VerticalAlignment="Center" Margin="0,0,30,0"/>
+                            <WrapPanel Orientation="Vertical">
+                                <TextBox></TextBox>
+                                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                </WrapPanel>
+                            </WrapPanel>
+                        </WrapPanel>
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
+                            <TextBlock Text="2" VerticalAlignment="Center" Margin="0,0,30,0"/>
+                            <WrapPanel Orientation="Vertical">
+                                <TextBox></TextBox>
+                                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                </WrapPanel>
+                            </WrapPanel>
+                        </WrapPanel>
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
+                            <TextBlock Text="3" VerticalAlignment="Center" Margin="0,0,30,0"/>
+                            <WrapPanel Orientation="Vertical">
+                                <TextBox></TextBox>
+                                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                </WrapPanel>
+                            </WrapPanel>
+                        </WrapPanel>
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
+                            <TextBlock Text="4" VerticalAlignment="Center" Margin="0,0,30,0"/>
+                            <WrapPanel Orientation="Vertical">
+                                <TextBox></TextBox>
+                                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                </WrapPanel>
+                            </WrapPanel>
+                        </WrapPanel>
+                        <WrapPanel Orientation="Vertical" x:Name="Cht" Width="900" Margin="0,10,0,0">
+
+
+                            <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" x:Name="Cht1" Margin="0,0,0,4">
+                                <TextBlock FontWeight="Bold" Margin="0,0,30,0">Раздел ЧТЕНИЕ</TextBlock>
+                                <Button x:Name="del1" Content="Убрать данный раздел" Click="del1_Click"></Button>
+                            </WrapPanel>
+                            <Border BorderBrush="Black"  BorderThickness="1" Padding="2,2,2,2" Margin="0,0,0,4">
+                                <TextBlock  TextWrapping="Wrap" FontStyle="Italic" FontWeight="Bold" Text="Прочитай текст. Определи, какие из приведенных ниже утверждений 1–3 соответствуют его содержанию (1–True), а какие не соответствуют (2–False)."></TextBlock>
+                            </Border>
+                            <TextBox Margin="0,0,0,4" TextWrapping="Wrap"></TextBox>
+
+                            <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
+                                <TextBlock Text="1" VerticalAlignment="Center" Margin="0,0,30,0"/>
+                                <WrapPanel Orientation="Vertical">
+                                    <TextBox></TextBox>
+                                    <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                        <RadioButton Content="True" Margin="0,0,50,0"></RadioButton>
+                                        <RadioButton Content="False"></RadioButton>
+                                    </WrapPanel>
+                                </WrapPanel>
+                            </WrapPanel>
+
+                            <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
+                                <TextBlock Text="2" VerticalAlignment="Center" Margin="0,0,30,0"/>
+                                <WrapPanel Orientation="Vertical">
+                                    <TextBox></TextBox>
+                                    <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                        <RadioButton Content="True" Margin="0,0,50,0"></RadioButton>
+                                        <RadioButton Content="False"></RadioButton>
+                                    </WrapPanel>
+                                </WrapPanel>
+                            </WrapPanel>
+
+                            <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4"> 
+                                <TextBlock Text="3" VerticalAlignment="Center" Margin="0,0,30,0"/>
+                                <WrapPanel Orientation="Vertical">
+                                    <TextBox></TextBox>
+                                    <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                        <RadioButton Content="True" Margin="0,0,50,0"></RadioButton>
+                                        <RadioButton Content="False"></RadioButton>
+                                    </WrapPanel>
+                                </WrapPanel>
+                            </WrapPanel>
+
+                        </WrapPanel>
+
+                    </WrapPanel>
+
+
+
+
+
+                    <WrapPanel Orientation="Vertical" x:Name="LexGram" Width="900" Margin="15,0,0,0">
+
+                        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" x:Name="LexGram1" Margin="0,0,0,4">
+                            <TextBlock FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,30,0">Раздел ЛЕКСИКА И ГРАММАТИКА</TextBlock>
+                            <Button x:Name="del2" Content="Убрать данный раздел" Click="del2_Click"></Button>
+                        </WrapPanel>
+
+
+                        <Border BorderBrush="Black" BorderThickness="1" Padding="2,2,2,2" Margin="0,0,0,4">
+                            <TextBlock TextWrapping="Wrap" FontStyle="Italic" FontWeight="Bold" Text="Прочитай текст. Заполни пропуски, обозначен¬ные буквами А–Е, подходящими по смыслу словами, данными в списке 1–5. Перенеси номера выбранных слов в таблицу. Используй каждую цифру только один раз."></TextBlock>
+                        </Border>
+                        <Border BorderBrush="Black" BorderThickness="1" Padding="2,2,2,2" Margin="0,0,0,4">
+                            <WrapPanel Orientation="Horizontal">
+                                <TextBlock Text="1)"></TextBlock>
+                                <TextBox MinWidth="50" Margin="0,0,20,0"></TextBox>
+                                <TextBlock Text="2)"></TextBlock>
+                                <TextBox MinWidth="50" Margin="0,0,20,0"></TextBox>
+                                <TextBlock Text="3)"></TextBlock>
+                                <TextBox MinWidth="50" Margin="0,0,20,0"></TextBox>
+                                <TextBlock Text="4)"></TextBlock>
+                                <TextBox MinWidth="50" Margin="0,0,20,0"></TextBox>
+                                <TextBlock Text="5)"></TextBlock>
+                                <TextBox MinWidth="50" Margin="0,0,20,0"></TextBox>
+                            </WrapPanel>
+                        </Border>
+
+                        <WrapPanel Orientation="Horizontal" Margin="0,0,0,4">
+                            <TextBox MinWidth="50" Margin="5,0,5,0"></TextBox>
+                            <Border BorderBrush="Black" BorderThickness="1" Padding="1,1,1,1">
+                                <TextBlock TextWrapping="Wrap" FontWeight="Bold" Text="A"></TextBlock>
+                            </Border>
+                            <TextBox MinWidth="50" Margin="5,0,5,0"></TextBox>
+                            <Border BorderBrush="Black" BorderThickness="1" Padding="1,1,1,1">
+                                <TextBlock TextWrapping="Wrap" FontWeight="Bold" Text="B"></TextBlock>
+                            </Border>
+                            <TextBox MinWidth="50" Margin="5,0,5,0"></TextBox>
+                            <Border BorderBrush="Black" BorderThickness="1" Padding="1,1,1,1">
+                                <TextBlock TextWrapping="Wrap" FontWeight="Bold" Text="C"></TextBlock>
+                            </Border>
+                            <TextBox MinWidth="50" Margin="5,0,5,0"></TextBox>
+                            <Border BorderBrush="Black" BorderThickness="1" Padding="1,1,1,1">
+                                <TextBlock TextWrapping="Wrap" FontWeight="Bold" Text="D"></TextBlock>
+                            </Border>
+                            <TextBox MinWidth="50" Margin="5,0,5,0"></TextBox>
+                            <Border BorderBrush="Black" BorderThickness="1" Padding="1,1,1,1">
+                                <TextBlock TextWrapping="Wrap" FontWeight="Bold" Text="E"></TextBlock>
+                            </Border>
+                            <TextBox MinWidth="50" Margin="5,0,5,0"></TextBox>
+                        </WrapPanel>
+
+                        <Border BorderBrush="Black" BorderThickness="1" Padding="2,2,2,2" Margin="0,0,0,4">
+                            <TextBlock TextWrapping="Wrap" FontStyle="Italic" FontWeight="Bold" Text="В предложениях1-5 заполни пропуски, выбрав подходящий ответ из трёх предложенных. Обведи номер выбранного ответа."></TextBlock>
+                        </Border>
+
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
+                            <TextBlock Text="1" VerticalAlignment="Center" Margin="0,0,30,0"/>
+                            <WrapPanel Orientation="Vertical">
+                                <TextBox></TextBox>
+                                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                </WrapPanel>
+                            </WrapPanel>
+                        </WrapPanel>
+
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
+                            <TextBlock Text="2" VerticalAlignment="Center" Margin="0,0,30,0"/>
+                            <WrapPanel Orientation="Vertical">
+                                <TextBox></TextBox>
+                                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                </WrapPanel>
+                            </WrapPanel>
+                        </WrapPanel>
+
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
+                            <TextBlock Text="3" VerticalAlignment="Center" Margin="0,0,30,0"/>
+                            <WrapPanel Orientation="Vertical">
+                                <TextBox></TextBox>
+                                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                </WrapPanel>
+                            </WrapPanel>
+                        </WrapPanel>
+
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
+                            <TextBlock Text="4" VerticalAlignment="Center" Margin="0,0,30,0"/>
+                            <WrapPanel Orientation="Vertical">
+                                <TextBox></TextBox>
+                                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                </WrapPanel>
+                            </WrapPanel>
+                        </WrapPanel>
+
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
+                            <TextBlock Text="5" VerticalAlignment="Center" Margin="0,0,30,0"/>
+                            <WrapPanel Orientation="Vertical">
+                                <TextBox></TextBox>
+                                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                    <RadioButton></RadioButton>
+                                    <TextBox MinWidth="50" Margin="0,0,50,0"></TextBox>
+                                </WrapPanel>
+                            </WrapPanel>
+                        </WrapPanel>
+                    </WrapPanel>
+                </WrapPanel>
+
+                <WrapPanel>
+                    <WrapPanel Orientation="Vertical" x:Name="Pism" Width="900" Margin="0,10,0,0">
+
+                        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" x:Name="Pism1" Margin="0,0,0,4">
+                            <TextBlock FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,30,0">Раздел ПИСЬМО</TextBlock>
+                            <Button x:Name="del3" Content="Убрать данный раздел" Click="del3_Click"></Button>
+                        </WrapPanel>
+
+
+                        <Border BorderBrush="Black" BorderThickness="1" Padding="2,2,2,2" Margin="0,0,0,4">
+                            <TextBlock TextWrapping="Wrap" FontStyle="Italic" FontWeight="Bold" Text="Прочитай письмо от зарубежного друга и напиши ответ, завершив незаконченные предложения в бланке ответа."></TextBlock>
+                        </Border>
+
+                        <TextBlock Margin="0,0,0,4" TextWrapping="Wrap" FontWeight="Bold" Text="Текст письма зарубежного друга" HorizontalAlignment="Center"></TextBlock>
+
+                        <Border BorderBrush="Black" BorderThickness="1" Padding="1,1,1,1" Margin="0,0,0,4">
+                            <TextBox></TextBox>
+                        </Border>
+                        <TextBlock TextWrapping="Wrap" Margin="0,0,0,4" FontWeight="Bold" Text="Бланк ответа" HorizontalAlignment="Center"></TextBlock>
+
+                        <Border BorderBrush="Black" BorderThickness="1,1,1,0" Padding="1,1,1,1" Width="500">
+                            <WrapPanel Orientation="Vertical" HorizontalAlignment="Right" >
+                                <TextBlock>Moscow</TextBlock>
+                                <TextBlock>Russia</TextBlock>
+                                <Border BorderBrush="Black" Width="200" BorderThickness="0,0,0,1" Height="20"/>
+                            </WrapPanel>
+                        </Border>
+                        <Border BorderBrush="Black" BorderThickness="1,0,1,1" Padding="1,1,1,1"  Width="500">
+                            <WrapPanel Orientation="Vertical" HorizontalAlignment="Left" >
+                                <WrapPanel Orientation="Horizontal">
+                                    <TextBlock>Dear</TextBlock>
+                                    <Border BorderBrush="Black" Width="150" BorderThickness="0,0,0,1" Height="15"/>
+                                    <TextBlock Text="  ,"></TextBlock>
+                                </WrapPanel>
+                                <WrapPanel Orientation="Horizontal">
+                                    <TextBlock>My name is</TextBlock>
+                                    <Border BorderBrush="Black" Width="150" BorderThickness="0,0,0,1" Height="15"/>
+                                    <TextBlock Text="  . "></TextBlock>
+                                    <TextBlock>I live in</TextBlock>
+                                    <Border BorderBrush="Black" Width="200" BorderThickness="0,0,0,1" Height="15"/>
+                                    <TextBlock Text="  . "></TextBlock>
+                                    <TextBlock>I’m</TextBlock>
+                                    <Border BorderBrush="Black" Width="100" BorderThickness="0,0,0,1" Height="15"/>
+                                    <TextBlock Text="  years old. "></TextBlock>
+                                    <TextBlock>My family is</TextBlock>
+                                    <Border BorderBrush="Black" Width="200" BorderThickness="0,0,0,1" Height="15"/>
+                                    <TextBlock Text="  . "></TextBlock>
+                                    <TextBlock>I live with</TextBlock>
+                                    <Border BorderBrush="Black" Width="500" BorderThickness="0,0,0,1" Height="15"/>
+                                    <TextBlock Text="  . "></TextBlock>
+                                    <TextBlock>I like to</TextBlock>
+                                    <Border BorderBrush="Black" Width="300" BorderThickness="0,0,0,1" Height="15"/>
+                                    <TextBlock Text="  . "></TextBlock>
+                                    <TextBlock>My favourite food is</TextBlock>
+                                    <Border BorderBrush="Black" Width="200" BorderThickness="0,0,0,1" Height="15"/>
+                                    <TextBlock Text="  . "></TextBlock>
+                                </WrapPanel>
+                                <TextBlock>Please, write me soon!</TextBlock>
+
+                                <TextBlock>Best wishes,</TextBlock>
+                                <Border HorizontalAlignment="Left" BorderBrush="Black" Margin="0,0,0,3" Width="200" BorderThickness="0,0,0,1" Height="15"/>
+
+                            </WrapPanel>
+                        </Border>
+                    </WrapPanel>
+
+                   
+                    <WrapPanel Orientation="Vertical" x:Name="Govor" Width="900" Margin="15,-110,0,0">
+
+                        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"  x:Name="Govor1" Margin="0,0,0,4"> 
+                        <TextBlock FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,30,0">Раздел ПИСЬМО</TextBlock>
+                        <Button x:Name="del4" Content="Убрать данный раздел" Click="del4_Click"></Button>
+                    </WrapPanel>
+
+
+                        <Border BorderBrush="Black" BorderThickness="1" Padding="5,5,5,5" Margin="0,0,0,4">
+                            <WrapPanel Orientation="Vertical">
+                                <WrapPanel Orientation="Horizontal">
+                                    <TextBlock TextWrapping="Wrap" FontStyle="Italic" FontWeight="Bold" Text="Расскажи о"></TextBlock>
+                                    <TextBox MinWidth="50"></TextBox>
+                                    <TextBlock TextWrapping="Wrap" FontStyle="Italic" FontWeight="Bold" Text="Для этого дай полный ответ на каждый из пяти вопросов. Твое высказывание должно содержать не менее пяти предложений. Будет хорошо, если ты сможешь сказать более пяти предложений."></TextBlock>
+                                </WrapPanel>
+                                <WrapPanel Orientation="Vertical">
+                                    <TextBox MinWidth="50"></TextBox>
+                                    <TextBox MinWidth="50"></TextBox>
+                                    <TextBox MinWidth="50"></TextBox>
+                                    <TextBox MinWidth="50"></TextBox>
+                                    <TextBox MinWidth="50"></TextBox>
+                                </WrapPanel>
+                            </WrapPanel>
+                        </Border>
+                    </WrapPanel>
+                </WrapPanel>
+            </WrapPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

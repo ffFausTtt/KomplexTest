@@ -1,0 +1,82 @@
+﻿<Window x:Class="test.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:test"
+        mc:Ignorable="d" 
+        Icon="img/иконка.ico"
+        Title="enGuYourTaskide" WindowStartupLocation="CenterScreen"
+WindowStyle="None" AllowsTransparency="True" WindowState="Maximized" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+        </Style>
+    </Window.Resources>
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="bg.png"/>
+        </Grid.Background>
+
+
+        <TextBlock
+                    x:Name="text" FontSize="24" Foreground="White" TextAlignment="Center" Width="600" TextWrapping="Wrap" Margin="10,330,0,0"
+                   Text= "При ознакомлении с демонстрационным вариантом следует иметь в виду, что задания, включённые в него, не отражают всех планируемых результатов, достижение которых может проверяться итоговой работой.">
+        </TextBlock>
+
+        <StackPanel>
+            <TextBlock
+            x:Name="var1" FontSize="24" FontWeight="Bold" Foreground="White" Margin="430,280,0,0" MouseDown="MyWipedText9_MouseDown">
+            Вариант 1
+            </TextBlock>
+            <TextBlock
+            x:Name="var2" FontSize="24" FontWeight="Bold" Foreground="White" Margin="430,20,0,0" MouseDown="MyWipedText10_MouseDown">
+            Вариант 2
+            </TextBlock>
+            <TextBlock
+            x:Name="var3" FontSize="24" FontWeight="Bold" Foreground="White" Margin="430,20,0,0" MouseDown="MyWipedText11_MouseDown">
+            Вариант 3
+            </TextBlock>
+            <TextBlock
+            x:Name="var4" FontSize="24" FontWeight="Bold" Foreground="White" Margin="430,20,0,0" MouseDown="MyWipedText12_MouseDown">
+            Вариант 4
+            </TextBlock>
+            <TextBlock
+            x:Name="var5" FontSize="24" FontWeight="Bold" Foreground="White" Margin="430,20,0,0" MouseDown="MyWipedText13_MouseDown">
+            Вариант 5
+            </TextBlock>
+            <TextBlock
+            x:Name="new" FontSize="24" FontWeight="Bold" Foreground="White" Margin="430,20,0,0" MouseDown="new_MouseDown">
+            Новый тест
+            </TextBlock>
+        </StackPanel>
+
+        <Image Source="img/te.png" Height="700" Margin="650,180,0,0"></Image>
+        <Image Source="img/ddfdfdf 2.png" Height="130" Margin="1100,0,0,500"></Image>
+        <Image Source="img/голос.png" VerticalAlignment="Top" Width="50" Height="50" Margin="1074,270,0,0" MouseDown="Image_MouseDown" RenderTransformOrigin="0.321,0.252" >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-16"/>
+                    <TranslateTransform X="8.51" Y="-3.667"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Source="img/ddfdfdf 3.png" Height="130" Margin="0,200,630,0"></Image>
+        <TextBlock Text="На главную" FontSize="20" MouseDown="TextBlock_MouseDown" RenderTransformOrigin="0.5,0.5" Margin="0,602,730,0" TextAlignment="Center" Width="85" TextWrapping="Wrap">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="16"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform></TextBlock>
+    </Grid>
+</Window>

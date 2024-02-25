@@ -1,0 +1,156 @@
+﻿<Window x:Class="test.windowsRez.RezultVar3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:test.windowsRez"
+        mc:Ignorable="d"
+        Icon="/img/иконка.ico"
+        Title="enGuide"
+        DataContext = "{Binding RelativeSource={RelativeSource Mode=Self}}">
+    <Grid>
+        <ScrollViewer>
+            <WrapPanel Orientation="Vertical" Background="{Binding bg}" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Margin="20,10,20,0">
+                    <WrapPanel  Orientation="Horizontal" Background="{Binding Cl1}" Margin="0,5,0,0">
+                        <TextBlock  TextWrapping="Wrap" FontSize="{Binding s}" Text="Ваш ответ: " Foreground="{Binding fg}"></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" x:Name="z1" Foreground="{Binding fg}"></TextBlock>
+                        <TextBlock FontSize="{Binding s}" Text=" "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" Foreground="{Binding fg}" Text="Правильный ответ: " FontSize="{Binding s}"></TextBlock>
+                        <TextBlock TextWrapping="Wrap"  FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z1otv" Text="Nina has got a brother, Nina's father's name is not Sergey, Last weekend Nina's family went to the park, Last weekend Nina's family drank tea in a cafe, Nina likes living in Moscow"></TextBlock>
+            </WrapPanel>
+                    <WrapPanel Orientation="Horizontal" Background="{Binding Cl2}" Margin="0,5,0,5">
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Ваш ответ: "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z2"></TextBlock>
+                    <TextBlock FontSize="{Binding s}" Text=" "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" Foreground="{Binding fg}" Text="Правильный ответ: " FontSize="{Binding s}"></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z2otv" Text="True"></TextBlock>
+            </WrapPanel>
+                    <WrapPanel Orientation="Horizontal" Background="{Binding Cl3}" Margin="0,0,0,5">
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text = "Ваш ответ: "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z3"></TextBlock>
+                    <TextBlock FontSize="{Binding s}" Text=" "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" Foreground="{Binding fg}" Text="Правильный ответ: " FontSize="{Binding s}"></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z3otv" Text="False"></TextBlock>
+            </WrapPanel>
+                    <WrapPanel Orientation="Horizontal" Background="{Binding Cl4}" Margin="0,0,0,5">
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Ваш ответ: "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z4"></TextBlock>
+                    <TextBlock FontSize="{Binding s}" Text=" "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" Foreground="{Binding fg}" Text="Правильный ответ: " FontSize="{Binding s}"></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z4otv" Text="False"></TextBlock>
+            </WrapPanel>
+                    <WrapPanel Orientation="Horizontal" Background="{Binding Cl5}" Margin="0,0,0,5">
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Ваш ответ: "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z5"></TextBlock>
+                    <TextBlock FontSize="{Binding s}" Text=" "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" Foreground="{Binding fg}" Text="Правильный ответ: " FontSize="{Binding s}"></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z5otv" Text="True"></TextBlock>
+            </WrapPanel>
+                    <WrapPanel Orientation="Horizontal" Background="{Binding Cl6}" Margin="0,0,0,5">
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Ваш ответ: "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z6"></TextBlock>
+                    <TextBlock FontSize="{Binding s}" Text=" "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" Foreground="{Binding fg}" Text="Правильный ответ: " FontSize="{Binding s}"></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z6otv" Text="Not stated"></TextBlock>
+            </WrapPanel>
+                    <WrapPanel Orientation="Horizontal" Background="{Binding Cl7}" Margin="0,0,0,5">
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Ваш ответ: "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z7"></TextBlock>
+                    <TextBlock FontSize="{Binding s}" Text=" "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" Foreground="{Binding fg}" Text="Правильный ответ: " FontSize="{Binding s}"></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z7otv" Text="are"></TextBlock>
+            </WrapPanel>
+                    <WrapPanel Orientation="Horizontal" Background="{Binding Cl8}" Margin="0,0,0,5">
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Ваш ответ: "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z8"></TextBlock>
+                    <TextBlock FontSize="{Binding s}" Text=" "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" Foreground="{Binding fg}" Text="Правильный ответ: " FontSize="{Binding s}"></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z8otv" Text="in"></TextBlock>
+            </WrapPanel>
+                    <WrapPanel Orientation="Horizontal" Background="{Binding Cl9}" Margin="0,0,0,5">
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Ваш ответ: "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z9"></TextBlock>
+                    <TextBlock FontSize="{Binding s}" Text=" "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" Foreground="{Binding fg}" Text="Правильный ответ: " FontSize="{Binding s}"></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z9otv" Text="has got"></TextBlock>
+            </WrapPanel>
+                    <WrapPanel Orientation="Horizontal" Background="{Binding Cl10}" Margin="0,0,0,5">
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Ваш ответ: "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z10"></TextBlock>
+                    <TextBlock FontSize="{Binding s}" Text=" "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" Foreground="{Binding fg}" Text="Правильный ответ: " FontSize="{Binding s}"></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z10otv" Text="oldest"></TextBlock>
+            </WrapPanel>
+                    <WrapPanel Orientation="Horizontal" Background="{Binding Cl11}" Margin="0,0,0,5">
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Ваш ответ: "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z11"></TextBlock>
+                    <TextBlock FontSize="{Binding s}" Text=" "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" Foreground="{Binding fg}" Text="Правильный ответ: " FontSize="{Binding s}"></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z11otv" Text="west"></TextBlock>
+            </WrapPanel>
+                    <WrapPanel Orientation="Horizontal" Background="{Binding Cl12}" Margin="0,0,0,5">
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Ваш ответ: "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z12"></TextBlock>
+                    <TextBlock FontSize="{Binding s}" Text=" "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" Foreground="{Binding fg}" Text="Правильный ответ: " FontSize="{Binding s}"></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z12otv" Text="short"></TextBlock>
+            </WrapPanel>
+                    <WrapPanel Orientation="Horizontal" Background="{Binding Cl13}" Margin="0,0,0,5">
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Ваш ответ: "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z13"></TextBlock>
+                    <TextBlock FontSize="{Binding s}" Text=" "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" Foreground="{Binding fg}" Text="Правильный ответ: " FontSize="{Binding s}"></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z13otv" Text="cooker"></TextBlock>
+            </WrapPanel>
+                    <WrapPanel Orientation="Horizontal" Background="{Binding Cl14}" Margin="0,0,0,5">
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Ваш ответ: "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z14"></TextBlock>
+                    <TextBlock FontSize="{Binding s}" Text=" "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" Foreground="{Binding fg}" Text="Правильный ответ: " FontSize="{Binding s}"></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z14otv" Text="winter"></TextBlock>
+            </WrapPanel>
+                    <WrapPanel Orientation="Horizontal" Background="{Binding Cl15}" Margin="0,0,0,5">
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Ваш ответ: "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z15"></TextBlock>
+                    <TextBlock FontSize="{Binding s}" Text=" "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" Foreground="{Binding fg}" Text="Правильный ответ: " FontSize="{Binding s}"></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z15otv" Text="ant"></TextBlock>
+            </WrapPanel>
+                    <WrapPanel Orientation="Horizontal" Background="{Binding Cl16}" Margin="0,0,0,5">
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Ваш ответ: "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z16"></TextBlock>
+                    <TextBlock FontSize="{Binding s}" Text=" "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" Foreground="{Binding fg}" Text="Правильный ответ: " FontSize="{Binding s}"></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z16otv" Text="peats"></TextBlock>
+            </WrapPanel>
+                    <WrapPanel Orientation="Horizontal" Background="{Binding Cl17}" Margin="0,0,0,5">
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Ваш ответ: "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z17"></TextBlock>
+                    <TextBlock FontSize="{Binding s}" Text=" "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" Foreground="{Binding fg}" Text="Правильный ответ: " FontSize="{Binding s}"></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z17otv" Text="grapes"></TextBlock>
+            </WrapPanel>
+                    <WrapPanel Orientation="Horizontal" Background="{Binding Cl18}" Margin="0,0,0,5">
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Ваш ответ: "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z18"></TextBlock>
+                    <TextBlock FontSize="{Binding s}" Text=" "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" Foreground="{Binding fg}" Text="Правильный ответ: " FontSize="{Binding s}"></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z18otv" Text="tomatoes"></TextBlock>
+            </WrapPanel>
+                    <WrapPanel Orientation="Horizontal" Background="{Binding Cl19}" Margin="0,0,0,5">
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Ваш ответ: "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z19"></TextBlock>
+                    <TextBlock FontSize="{Binding s}" Text=" "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" Foreground="{Binding fg}" Text="Правильный ответ: " FontSize="{Binding s}"></TextBlock>
+                        <TextBlock  TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" x:Name="z19otv" Text="apple"></TextBlock>
+            </WrapPanel>
+                    <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" FontWeight="Bold" Text = "Итого: "></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" FontWeight="Bold" x:Name="marktxt"></TextBlock>
+            </WrapPanel>
+        </StackPanel>
+        </WrapPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

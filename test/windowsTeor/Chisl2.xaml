@@ -1,0 +1,390 @@
+﻿<Window x:Class="test.windowsTeor.Chisl2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:test.windowsTeor"
+        mc:Ignorable="d"
+        Icon="/img/иконка.ico"
+        Title="enGuide" WindowState="Maximized" DataContext ="{Binding RelativeSource={RelativeSource Mode=Self}}">
+    <Grid  Background="{Binding bg}">
+        <ScrollViewer >
+            <WrapPanel Orientation="Vertical"  HorizontalAlignment="Center">
+                <StackPanel Margin="20,10,20,0">
+                    <WrapPanel Orientation="Horizontal" Margin="0,0,0,15" HorizontalAlignment="Center">
+                        <Button x:Name="Chack" Click="Chack_Click" FontSize="{Binding s}" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">На главную</Button>
+                        <Button x:Name="newbg" Click="newbg_Click" FontSize="{Binding s}" Background="Black" Foreground="#ffff00" BorderBrush="White" Margin="50,0,10,0">A</Button>
+                        <Button x:Name="newbg2" Click="newbg2_Click" FontSize="{Binding s}" Background="#99ccff" Foreground="#0f6cbf" BorderBrush="White">A</Button>
+                        <Button x:Name="newsz" Click="newsz_Click" FontSize="{Binding s}" Margin="10,0,10,0" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">A-</Button>
+                        <Button x:Name="newsz2" Click="newsz2_Click" FontSize="{Binding s}" Margin="0,0,10,0" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">A+</Button>
+                        <Button x:Name="oldbg" Click="oldbg_Click" FontSize="{Binding s}" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">R</Button>
+                        <Button Margin="50,0,0,0" x:Name="home" Click="home_Click" FontSize="{Binding s}" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">Перейти к упражнениям</Button>
+                    </WrapPanel>
+                    <Border  Height="40" Background="{Binding bg}" BorderBrush="{Binding fg}" BorderThickness="0.6" >
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Ordinal Numbers (порядковые числительные)" Margin="0,2,0,0" TextAlignment="Center"></TextBlock>
+                    </Border>
+                    <TextBlock HorizontalAlignment="Center" TextAlignment="Center"  Text="There are fifteen (15) children coming to" TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Margin="0,5,0,0" FontStyle="Italic"></TextBlock>
+                    <TextBlock HorizontalAlignment="Center" TextAlignment="Center" Text="Ann's party on the fifteenth (15th) of June." TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Margin="0,0,0,10" FontStyle="Italic"></TextBlock>
+                    <WrapPanel x:Name="prev" Margin="0,0,0,15" Orientation="Vertical" HorizontalAlignment="Center">
+                    <ScrollViewer VerticalScrollBarVisibility="Disabled" CanContentScroll="True" HorizontalScrollBarVisibility="Auto">
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Число" HorizontalAlignment="Center"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,1,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Порядковое" HorizontalAlignment="Center"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,1,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Сокращение" HorizontalAlignment="Center"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="1"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="first"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="1th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="2"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="second"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="2th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="3"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="third"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="3th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="4"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="fourth"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="4th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="5"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="fifth"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="5th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="6"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="sixth"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="6th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="7"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="seventh"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="7th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="8"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="eighth"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="8th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="9"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="ninth"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="9th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="10"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="tenth"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="10th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="11"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="eleventh"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="1th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="12"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="twelfth"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="12th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="13"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="thirteenth"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="13th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="14"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="fourteenth"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="14th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="15"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="fifteenth"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="15th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="16"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="sixteenth"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="16th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="17"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="seventeenth"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="17th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="18"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="eighteenth"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="18th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="19"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="nineteenth"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="19th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="20"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="twentieth"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="20th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="21"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="twenty-first"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="21th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="22"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="twenty-second"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="22th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="23"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="twenty-third"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="23th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="24"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="twenty-fourth"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="24th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="25"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="twenty-fifth"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="25th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="26"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="twenty-sixth"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="26th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="27"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="twenty-seventh"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="27th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="28"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="twenty-eighth"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="28th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="29"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="twenty-ninth"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="29th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="30"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="thirtieth"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="30th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="31"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="thirty-first"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="200">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="31th"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+                        </WrapPanel>
+                </StackPanel>
+            </WrapPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

@@ -1,0 +1,719 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{489330E9-AA98-4E60-9B77-223877807966}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>test</RootNamespace>
+    <AssemblyName>test</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="classes\ChangePages.cs" />
+    <Compile Include="NewTest.xaml.cs">
+      <DependentUpon>NewTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Var2.xaml.cs">
+      <DependentUpon>Var2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Var3.xaml.cs">
+      <DependentUpon>Var3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Var4.xaml.cs">
+      <DependentUpon>Var4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Var5.xaml.cs">
+      <DependentUpon>Var5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Start.xaml.cs">
+      <DependentUpon>Start.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Start2.xaml.cs">
+      <DependentUpon>Start2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher.xaml.cs">
+      <DependentUpon>Teacher.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsCheck\AAn.xaml.cs">
+      <DependentUpon>AAn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsCheck\Be.xaml.cs">
+      <DependentUpon>Be.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsCheck\CChisl.xaml.cs">
+      <DependentUpon>CChisl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsCheck\HGot.xaml.cs">
+      <DependentUpon>HGot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsCheck\MMany.xaml.cs">
+      <DependentUpon>MMany.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsCheck\MnCh.xaml.cs">
+      <DependentUpon>MnCh.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsCheck\ModGlag.xaml.cs">
+      <DependentUpon>ModGlag.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsCheck\PMest.xaml.cs">
+      <DependentUpon>PMest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsCheck\PredMest.xaml.cs">
+      <DependentUpon>PredMest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsCheck\Right.xaml.cs">
+      <DependentUpon>Right.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsCheck\SAny.xaml.cs">
+      <DependentUpon>SAny.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsCheck\Srav.xaml.cs">
+      <DependentUpon>Srav.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsCheck\TITA.xaml.cs">
+      <DependentUpon>TITA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsCheck\TTTT.xaml.cs">
+      <DependentUpon>TTTT.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsRez\RezultVar1.xaml.cs">
+      <DependentUpon>RezultVar1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsRez\RezultVar2.xaml.cs">
+      <DependentUpon>RezultVar2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tests.xaml.cs">
+      <DependentUpon>Tests.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Var1.xaml.cs">
+      <DependentUpon>Var1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsRez\RezultVar3.xaml.cs">
+      <DependentUpon>RezultVar3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsRez\RezultVar4.xaml.cs">
+      <DependentUpon>RezultVar4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsRez\RezultVar5.xaml.cs">
+      <DependentUpon>RezultVar5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTask\ArticleTask.xaml.cs">
+      <DependentUpon>ArticleTask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTask\ChislTask.xaml.cs">
+      <DependentUpon>ChislTask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTask\HaveGotTask.xaml.cs">
+      <DependentUpon>HaveGotTask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTask\HaveToTask.xaml.cs">
+      <DependentUpon>HaveToTask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTask\MnozhTask.xaml.cs">
+      <DependentUpon>MnozhTask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTask\MuchManyTask.xaml.cs">
+      <DependentUpon>MuchManyTask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTask\PredlogTask.xaml.cs">
+      <DependentUpon>PredlogTask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTask\PritMestTask.xaml.cs">
+      <DependentUpon>PritMestTask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTask\SomeAnyTask.xaml.cs">
+      <DependentUpon>SomeAnyTask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTask\SravPrevTask.xaml.cs">
+      <DependentUpon>SravPrevTask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTask\ThereIsThereAreTask.xaml.cs">
+      <DependentUpon>ThereIsThereAreTask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTask\ThisThatTask.xaml.cs">
+      <DependentUpon>ThisThatTask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTask\ToBeTask.xaml.cs">
+      <DependentUpon>ToBeTask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\Article.xaml.cs">
+      <DependentUpon>Article.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\Article2.xaml.cs">
+      <DependentUpon>Article2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\Chisl.xaml.cs">
+      <DependentUpon>Chisl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\Chisl2.xaml.cs">
+      <DependentUpon>Chisl2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\Guestion.xaml.cs">
+      <DependentUpon>Guestion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\Guestion2.xaml.cs">
+      <DependentUpon>Guestion2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\HaveGot.xaml.cs">
+      <DependentUpon>HaveGot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\HaveGot2.xaml.cs">
+      <DependentUpon>HaveGot2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\HaveTo.xaml.cs">
+      <DependentUpon>HaveTo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\HaveTo2.xaml.cs">
+      <DependentUpon>HaveTo2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\Mnozh.xaml.cs">
+      <DependentUpon>Mnozh.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\Mnozh2.xaml.cs">
+      <DependentUpon>Mnozh2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\MuchMany.xaml.cs">
+      <DependentUpon>MuchMany.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\MuchMany2.xaml.cs">
+      <DependentUpon>MuchMany2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\Predlog.xaml.cs">
+      <DependentUpon>Predlog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\Predlog2.xaml.cs">
+      <DependentUpon>Predlog2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\PritMest.xaml.cs">
+      <DependentUpon>PritMest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\PritMest2.xaml.cs">
+      <DependentUpon>PritMest2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\PritPadezh.xaml.cs">
+      <DependentUpon>PritPadezh.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\PritPadezh2.xaml.cs">
+      <DependentUpon>PritPadezh2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\SomeAny.xaml.cs">
+      <DependentUpon>SomeAny.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\SomeAny2.xaml.cs">
+      <DependentUpon>SomeAny2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\SravPrev.xaml.cs">
+      <DependentUpon>SravPrev.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\SravPrev2.xaml.cs">
+      <DependentUpon>SravPrev2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\ThereIsThereAre.xaml.cs">
+      <DependentUpon>ThereIsThereAre.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\ThereIsThereAre2.xaml.cs">
+      <DependentUpon>ThereIsThereAre2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\ThisThat.xaml.cs">
+      <DependentUpon>ThisThat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\ThisThat2.xaml.cs">
+      <DependentUpon>ThisThat2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\ToBe.xaml.cs">
+      <DependentUpon>ToBe.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowsTeor\ToBe2.xaml.cs">
+      <DependentUpon>ToBe2.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="NewTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\Var2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\Var3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\Var4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\Var5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Start.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Start2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Teacher.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsCheck\AAn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsCheck\Be.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsCheck\CChisl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsCheck\HGot.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsCheck\MMany.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsCheck\MnCh.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsCheck\ModGlag.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsCheck\PMest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsCheck\PredMest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsCheck\Right.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsCheck\SAny.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsCheck\Srav.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsCheck\TITA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsCheck\TTTT.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsRez\RezultVar1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsRez\RezultVar2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tests.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\Var1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsRez\RezultVar3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsRez\RezultVar4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsRez\RezultVar5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTask\ArticleTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTask\ChislTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTask\HaveGotTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTask\HaveToTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTask\MnozhTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTask\MuchManyTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTask\PredlogTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTask\PritMestTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTask\SomeAnyTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTask\SravPrevTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTask\ThereIsThereAreTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTask\ThisThatTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTask\ToBeTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\Article.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\Article2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\Chisl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\Chisl2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\Guestion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\Guestion2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\HaveGot.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\HaveGot2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\HaveTo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\HaveTo2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\Mnozh.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\Mnozh2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\MuchMany.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\MuchMany2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\Predlog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\Predlog2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\PritMest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\PritMest2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\PritPadezh.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\PritPadezh2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\SomeAny.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\SomeAny2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\SravPrev.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\SravPrev2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\ThereIsThereAre.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\ThereIsThereAre2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\ThisThat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\ThisThat2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\ToBe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowsTeor\ToBe2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="yjdsqajy" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\доска.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\иконка.ico" />
+    <Resource Include="img\иконка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\учитель.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\фон.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\голос.png" />
+    <Resource Include="img\голос белый.png" />
+    <Resource Include="img\голос желтый.png" />
+    <Resource Include="img\голос синий.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\виноград.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\груши.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\томаты.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\яблоки.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\behind.png" />
+    <Resource Include="img\between.png" />
+    <Resource Include="img\in front of.png" />
+    <Resource Include="img\in.png" />
+    <Resource Include="img\next to.png" />
+    <Resource Include="img\on.png" />
+    <Resource Include="img\opposite.png" />
+    <Resource Include="img\under.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\behindЖ.png" />
+    <Resource Include="img\behindС.png" />
+    <Resource Include="img\betweenЖ.png" />
+    <Resource Include="img\betweenС.png" />
+    <Resource Include="img\in front ofЖ.png" />
+    <Resource Include="img\in front ofС.png" />
+    <Resource Include="img\inЖ.png" />
+    <Resource Include="img\inС.png" />
+    <Resource Include="img\next toЖ.png" />
+    <Resource Include="img\next toС.png" />
+    <Resource Include="img\onЖ.png" />
+    <Resource Include="img\onС.png" />
+    <Resource Include="img\oppositeЖ.png" />
+    <Resource Include="img\oppositeС.png" />
+    <Resource Include="img\underЖ.png" />
+    <Resource Include="img\underС.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\behindcat.png" />
+    <Resource Include="img\incat.png" />
+    <Resource Include="img\infrontofcat.png" />
+    <Resource Include="img\oncat.png" />
+    <Resource Include="img\oppositecat.png" />
+    <Resource Include="img\undercat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Рисунок1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\преобразованный.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="преобразованный.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ddfdfdf 2.png" />
+    <Resource Include="img\ddfdfdf 3.png" />
+    <Resource Include="img\te.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\11.png" />
+    <Resource Include="img\16.png" />
+    <Resource Include="img\20.png" />
+    <Resource Include="img\3.png" />
+    <Resource Include="img\31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\банан.png" />
+    <Resource Include="img\зонт.png" />
+    <Resource Include="img\мяч.png" />
+    <Resource Include="img\чайный.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\jgf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Выход.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,39 @@
+﻿<Window x:Class="test.windowsTeor.SomeAny2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:test.windowsTeor"
+        mc:Ignorable="d"
+      Icon="/img/иконка.ico"
+        Title="enGuide" WindowState="Maximized" DataContext ="{Binding RelativeSource={RelativeSource Mode=Self}}">
+    <Grid  Background="{Binding bg}">
+        <ScrollViewer>
+            <WrapPanel Orientation="Vertical"  HorizontalAlignment="Center">
+                <StackPanel Margin="20,10,20,0">
+                    <WrapPanel Orientation="Horizontal" Margin="0,0,0,15" HorizontalAlignment="Center">
+                        <Button x:Name="Chack" Click="Chack_Click" FontSize="{Binding s}" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">На главную</Button>
+                        <Button x:Name="newbg" Click="newbg_Click" FontSize="{Binding s}" Background="Black" Foreground="#ffff00" BorderBrush="White" Margin="50,0,10,0">A</Button>
+                        <Button x:Name="newbg2" Click="newbg2_Click" FontSize="{Binding s}" Background="#99ccff" Foreground="#0f6cbf" BorderBrush="White">A</Button>
+                        <Button x:Name="newsz" Click="newsz_Click" FontSize="{Binding s}" Margin="10,0,10,0" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">A-</Button>
+                        <Button x:Name="newsz2" Click="newsz2_Click" FontSize="{Binding s}" Margin="0,0,10,0" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">A+</Button>
+                        <Button x:Name="oldbg" Click="oldbg_Click" FontSize="{Binding s}" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">R</Button>
+                        <Button Margin="50,0,0,0" x:Name="home" Click="home_Click" FontSize="{Binding s}" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">Перейти к упражнениям</Button>
+                    </WrapPanel>
+                    <Border  Height="40" Background="{Binding bg}" BorderBrush="{Binding fg}" BorderThickness="0.6" >
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Местоимения Some/Any" Margin="0,2,0,0" TextAlignment="Center"></TextBlock>
+                    </Border>
+                    <TextBlock Text="Some употребляется с неисчисляемыми существительными в утвердительных предложениях." TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Margin="0,5,0,0"></TextBlock>
+                    <TextBlock Text="There is some cheese in the fridge." TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Margin="0,0,0,10" FontStyle="Italic"></TextBlock>
+                    <TextBlock Text="Some также употребляется в утвердительных предложениях с исчисляемыми существительными во множественном числе." TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}"></TextBlock>
+                    <TextBlock Text="There are some appies in the fridge." TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Margin="0,0,0,10" FontStyle="Italic"></TextBlock>
+                    <TextBlock Text="Any употребляется с исчисляемыми и неисчисляемыми существительными в отрицательных и вопросительных предложениях." TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}"></TextBlock>
+                    <TextBlock Text="There aren't any eggs оп the table. There isn't any water in the glass. Аге there any biscuits? Is there any chocolate?" TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Margin="0,0,0,10" FontStyle="Italic"></TextBlock>
+                    <TextBlock Text="Some употребляется в вопросительных предложениях, обозначающих просьбу." TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}"></TextBlock>
+                    <TextBlock Text="Сап I have some milk, please?" TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Margin="0,0,0,10" FontStyle="Italic"></TextBlock>
+                </StackPanel>
+            </WrapPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
+             

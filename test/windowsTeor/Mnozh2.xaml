@@ -1,0 +1,119 @@
+﻿<Window x:Class="test.windowsTeor.Mnozh2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:test.windowsTeor"
+        mc:Ignorable="d"
+       Icon="/img/иконка.ico"
+        Title="enGuide" WindowState="Maximized" DataContext ="{Binding RelativeSource={RelativeSource Mode=Self}}">
+    <Grid  Background="{Binding bg}">
+        <ScrollViewer>
+            <WrapPanel Orientation="Vertical"  HorizontalAlignment="Center">
+                <StackPanel Margin="20,10,20,0">
+                    <WrapPanel Orientation="Horizontal" Margin="0,0,0,15" HorizontalAlignment="Center">
+                        <Button x:Name="Chack" Click="Chack_Click" FontSize="{Binding s}" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">На главную</Button>
+                        <Button x:Name="newbg" Click="newbg_Click" FontSize="{Binding s}" Background="Black" Foreground="#ffff00" BorderBrush="White" Margin="50,0,10,0">A</Button>
+                        <Button x:Name="newbg2" Click="newbg2_Click" FontSize="{Binding s}" Background="#99ccff" Foreground="#0f6cbf" BorderBrush="White">A</Button>
+                        <Button x:Name="newsz" Click="newsz_Click" FontSize="{Binding s}" Margin="10,0,10,0" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">A-</Button>
+                        <Button x:Name="newsz2" Click="newsz2_Click" FontSize="{Binding s}" Margin="0,0,10,0" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">A+</Button>
+                        <Button x:Name="oldbg" Click="oldbg_Click" FontSize="{Binding s}" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">R</Button>
+                        <Button Margin="50,0,0,0" x:Name="home" Click="home_Click" FontSize="{Binding s}" Background="{Binding bg}" BorderBrush="{Binding fg}" Foreground="{Binding fg}">Перейти к упражнениям</Button>
+                    </WrapPanel>
+                    <Border  Height="40" Background="{Binding bg}" BorderBrush="{Binding fg}" BorderThickness="0.6" >
+                        <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Purals (формы множественного числа)" Margin="0,2,0,0" TextAlignment="Center"></TextBlock>
+                    </Border>
+                    <TextBlock Text="Большинство существительных образуют форму множественного числа путем добавления -s." TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Margin="0,5,0,0"></TextBlock>
+                    <TextBlock Text="chair - chairs" TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Margin="0,0,0,10" FontStyle="Italic"></TextBlock>
+                    <TextBlock Text="К существительным, оканчивающимся на -ch, -s, sh -ss, -о или -х во множественном числе добавляется -es." TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}"></TextBlock>
+                    <TextBlock Text="bus - buses; glass - glasses; potato - potatoes; Ьох - boxes" TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Margin="0,0,0,10" FontStyle="Italic"></TextBlock>
+                    <TextBlock Text="К существительным, оканчивающимся на гласную + у добавляется -s." TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}"></TextBlock>
+                    <TextBlock Text="bоу- boys" TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Margin="0,0,0,10" FontStyle="Italic"></TextBlock>
+                    <TextBlock Text="У существительных, оканчивающихся на согласную + у, во множественном числе -у заменяется на -i и добавляется -es." TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}"></TextBlock>
+                    <TextBlock Text="baby - babies" TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Margin="0,0,0,10" FontStyle="Italic"></TextBlock>
+                    <TextBlock Text="У существительных, оканчивающихся на -f или -fe, во множественном числе заменяются на -v и добавляется -es." TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}"></TextBlock>
+                    <TextBlock Text="shetf - shetves " TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Margin="0,0,0,10" FontStyle="Italic"></TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Text="Исключения" Foreground="{Binding fg}" FontWeight="Bold" HorizontalAlignment="Center"></TextBlock>
+                    <WrapPanel x:Name="prev" Margin="0,0,0,15" Orientation="Vertical" HorizontalAlignment="Center">
+                    <ScrollViewer VerticalScrollBarVisibility="Disabled" CanContentScroll="True" HorizontalScrollBarVisibility="Auto">
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" HorizontalAlignment="Center">
+                        <Border  BorderBrush="{Binding bb}" BorderThickness="1" Width="250">
+                            <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Единственное число" HorizontalAlignment="Center"></TextBlock>
+                        </Border>
+                        <Border  BorderBrush="{Binding bb}" BorderThickness="0,1,1,1" Width="250">
+                            <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="Множественное число" HorizontalAlignment="Center"></TextBlock>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="250">
+                            <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="man"></TextBlock>
+                        </Border>
+                        <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="250">
+                            <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="men"></TextBlock>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="250">
+                            <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="woman"></TextBlock>
+                        </Border>
+                        <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="250">
+                            <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="women"></TextBlock>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="250">
+                            <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="child"></TextBlock>
+                        </Border>
+                        <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="250">
+                            <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="children"></TextBlock>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="250">
+                            <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="tooth"></TextBlock>
+                        </Border>
+                        <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="250">
+                            <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="teeth"></TextBlock>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="250">
+                            <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="foot"></TextBlock>
+                        </Border>
+                        <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="250">
+                            <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="feet"></TextBlock>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="250">
+                            <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="mouse"></TextBlock>
+                        </Border>
+                        <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="250">
+                            <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="mice"></TextBlock>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="250">
+                            <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="fish"></TextBlock>
+                        </Border>
+                        <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="250">
+                            <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="fish"></TextBlock>
+                        </Border>
+                    </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,10" HorizontalAlignment="Center">
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="1,0,1,1" Width="250">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="sheep"></TextBlock>
+                                </Border>
+                                <Border  BorderBrush="{Binding bb}" BorderThickness="0,0,1,1" Width="250">
+                                    <TextBlock TextWrapping="Wrap" FontSize="{Binding s}" Foreground="{Binding fg}" Text="sheep"></TextBlock>
+                                </Border>
+                            </StackPanel>
+                        </StackPanel>
+                        </ScrollViewer>
+                        </WrapPanel>
+                </StackPanel>
+            </WrapPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

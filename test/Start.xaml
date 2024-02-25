@@ -1,0 +1,225 @@
+﻿<Window  x:Class="test.Start"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:test"
+        Icon="img/иконка.ico"
+        mc:Ignorable="d"
+        Title="enGuide"
+        DataContext ="{Binding RelativeSource={RelativeSource Mode=Self}}" WindowStartupLocation="CenterScreen"
+WindowStyle="None" AllowsTransparency="True" WindowState="Maximized" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="преобразованный.png"/>
+        </Grid.Background>
+        <WrapPanel Orientation="Vertical" HorizontalAlignment="Center">
+            
+            <StackPanel Margin="20,150,20,0" HorizontalAlignment="Center" Width="1000">
+                <WrapPanel Orientation="Horizontal" Margin="0,0,0,15" HorizontalAlignment="Right">
+                    <Button x:Name="newbg" Click="newbg_Click" FontSize="{Binding s}" Background="Black" Margin="0,0,10,0" Foreground="#ffff00" BorderBrush="White">A</Button>
+                    <Button x:Name="newbg2" Click="newbg2_Click" FontSize="{Binding s}" Background="#99ccff" Foreground="#0f6cbf" BorderBrush="White">A</Button>
+                    <Button x:Name="newsz" Click="newsz_Click" FontSize="{Binding s}" Margin="10,0,10,0" Background="White">A-</Button>
+                    <Button x:Name="newsz2" Click="newsz2_Click" FontSize="{Binding s}" Margin="0,0,10,0" Background="White">A+</Button>
+                    <Button x:Name="oldbg" Click="oldbg_Click" FontSize="{Binding s}" Background="White">R</Button>
+                </WrapPanel>
+                <Button Margin="0,20,0,0" x:Name="home" Click="home_Click" FontSize="{Binding s}" Background="#FFE589" >Подготовка к диагностической работе</Button>
+                <ScrollViewer CanContentScroll="True">
+                    <StackPanel Orientation="Vertical" Height="600">
+
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                            <Border BorderBrush="#FFFF8000" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                                <Border.Effect>
+                                    <DropShadowEffect Opacity="0.6"/>
+                                </Border.Effect>
+                                <TextBlock Text="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}" />
+                            </Border>
+                            <WrapPanel Orientation="Vertical" VerticalAlignment="Center">
+                                <TextBlock x:Name="tem2" Text="Предлоги" FontSize="{Binding s}" MouseDown="tem2_MouseDown"></TextBlock>
+                            </WrapPanel>
+                        </WrapPanel>
+
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                            <Border BorderBrush="#FFFF8000" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                                <Border.Effect>
+                                    <DropShadowEffect Opacity="0.6"/>
+                                </Border.Effect>
+                                <TextBlock Text="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}"/>
+                            </Border>
+                            <WrapPanel Orientation="Vertical" VerticalAlignment="Center">
+                                <TextBlock x:Name="tem4" Text="Артикли" FontSize="{Binding s}" MouseDown="tem4_MouseDown"></TextBlock>
+                            </WrapPanel>
+                        </WrapPanel>
+
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                            <Border BorderBrush="#FFFF8000" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                                <Border.Effect>
+                                    <DropShadowEffect Opacity="0.6"/>
+                                </Border.Effect>
+                                <TextBlock Text="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}"/>
+                            </Border>
+                            <WrapPanel Orientation="Vertical" VerticalAlignment="Center">
+                                <TextBlock x:Name="tem5" Text="Сравнительная и превосходная степень прилагательных" FontSize="{Binding s}" MouseDown="tem5_MouseDown"></TextBlock>
+                            </WrapPanel>
+                        </WrapPanel>
+
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                            <Border BorderBrush="#FFFF8000" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                                <Border.Effect>
+                                    <DropShadowEffect Opacity="0.6"/>
+                                </Border.Effect>
+                                <TextBlock Text="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}" />
+                            </Border>
+                            <WrapPanel Orientation="Vertical" VerticalAlignment="Center">
+                                <TextBlock x:Name="tem6" Text="Much/Many/A lot of" FontSize="{Binding s}" MouseDown="tem6_MouseDown"></TextBlock>
+                            </WrapPanel>
+                        </WrapPanel>
+
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                            <Border BorderBrush="#FFFF8000" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                                <Border.Effect>
+                                    <DropShadowEffect Opacity="0.6"/>
+                                </Border.Effect>
+                                <TextBlock Text="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}"/>
+                            </Border>
+                            <WrapPanel Orientation="Vertical" VerticalAlignment="Center">
+                                <TextBlock x:Name="tem7" Text="Числительные" FontSize="{Binding s}" MouseDown="tem7_MouseDown"></TextBlock>
+                            </WrapPanel>
+                        </WrapPanel>
+
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                            <Border BorderBrush="#FFFF8000" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                                <Border.Effect>
+                                    <DropShadowEffect Opacity="0.6"/>
+                                </Border.Effect>
+                                <TextBlock Text="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}" />
+                            </Border>
+                            <WrapPanel Orientation="Vertical" VerticalAlignment="Center">
+                                <TextBlock x:Name="tem8" Text="Множественное число существительных" FontSize="{Binding s}"  MouseDown="tem8_MouseDown"></TextBlock>
+                            </WrapPanel>
+                        </WrapPanel>
+
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                            <Border BorderBrush="#FFFF8000" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                                <Border.Effect>
+                                    <DropShadowEffect Opacity="0.6"/>
+                                </Border.Effect>
+                                <TextBlock Text="7" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}"/>
+                            </Border>
+                            <WrapPanel Orientation="Vertical" VerticalAlignment="Center">
+                                <TextBlock x:Name="tem9" Text="Местоимения Some/Any" FontSize="{Binding s}" MouseDown="tem9_MouseDown"></TextBlock>
+                            </WrapPanel>
+                        </WrapPanel>
+
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                            <Border BorderBrush="#FFFF8000" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                                <Border.Effect>
+                                    <DropShadowEffect Opacity="0.6"/>
+                                </Border.Effect>
+                                <TextBlock Text="8" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}" />
+                            </Border>
+                            <WrapPanel Orientation="Vertical" VerticalAlignment="Center">
+                                <TextBlock x:Name="tem10" Text="Указательные местоимения This/That/These/Those" FontSize="{Binding s}" MouseDown="tem10_MouseDown"></TextBlock>
+                            </WrapPanel>
+                        </WrapPanel>
+
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                            <Border BorderBrush="#FFFF8000" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                                <Border.Effect>
+                                    <DropShadowEffect Opacity="0.6"/>
+                                </Border.Effect>
+                                <TextBlock Text="9" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}" />
+                            </Border>
+                            <WrapPanel Orientation="Vertical" VerticalAlignment="Center">
+                                <TextBlock x:Name="tem11" Text="Глагол 'to be'" FontSize="{Binding s}" MouseDown="tem11_MouseDown"></TextBlock>
+                            </WrapPanel>
+                        </WrapPanel>
+
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                            <Border BorderBrush="#FFFF8000" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                                <Border.Effect>
+                                    <DropShadowEffect Opacity="0.6"/>
+                                </Border.Effect>
+                                <TextBlock Text="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}"/>
+                            </Border>
+                            <WrapPanel Orientation="Vertical" VerticalAlignment="Center">
+                                <TextBlock x:Name="tem12" Text="Притяжательные местоимения" FontSize="{Binding s}" MouseDown="tem12_MouseDown"></TextBlock>
+                            </WrapPanel>
+                        </WrapPanel>
+
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                            <Border BorderBrush="#FFFF8000" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                                <Border.Effect>
+                                    <DropShadowEffect Opacity="0.6"/>
+                                </Border.Effect>
+                                <TextBlock Text="11" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}"/>
+                            </Border>
+                            <WrapPanel Orientation="Vertical" VerticalAlignment="Center">
+                                <TextBlock x:Name="tem13" Text="Притяжательный падеж" FontSize="{Binding s}" MouseDown="tem13_MouseDown"></TextBlock>
+                            </WrapPanel>
+                        </WrapPanel>
+
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                            <Border BorderBrush="#FFFF8000" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                                <Border.Effect>
+                                    <DropShadowEffect Opacity="0.6"/>
+                                </Border.Effect>
+                                <TextBlock Text="12" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}"/>
+                            </Border>
+                            <WrapPanel Orientation="Vertical" VerticalAlignment="Center">
+                                <TextBlock x:Name="tem14" Text="Глагол 'have got'" FontSize="{Binding s}" MouseDown="tem14_MouseDown"></TextBlock>
+                            </WrapPanel>
+                        </WrapPanel>
+
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                            <Border BorderBrush="#FFFF8000" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                                <Border.Effect>
+                                    <DropShadowEffect Opacity="0.6"/>
+                                </Border.Effect>
+                                <TextBlock Text="13" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}"/>
+                            </Border>
+                            <WrapPanel Orientation="Vertical" VerticalAlignment="Center">
+                                <TextBlock x:Name="tem15" Text="Конструкция There is/There are" FontSize="{Binding s}" MouseDown="tem15_MouseDown"></TextBlock>
+                            </WrapPanel>
+                        </WrapPanel>
+
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                            <Border BorderBrush="#FFFF8000" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                                <Border.Effect>
+                                    <DropShadowEffect Opacity="0.6"/>
+                                </Border.Effect>
+                                <TextBlock Text="14" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}" />
+                            </Border>
+                            <WrapPanel Orientation="Vertical" VerticalAlignment="Center">
+                                <TextBlock x:Name="tem16" Text="Модальные глаголы" FontSize="{Binding s}" MouseDown="tem16_MouseDown"></TextBlock>
+                            </WrapPanel>
+                        </WrapPanel>
+
+                        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                            <Border BorderBrush="#FFFF8000" BorderThickness="0,1,3,2" CornerRadius="50,50,50,50" Margin="10,3" Width="50" Height="50">
+                                <Border.Effect>
+                                    <DropShadowEffect Opacity="0.6"/>
+                                </Border.Effect>
+                                <TextBlock Text="15" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding s}" />
+                            </Border>
+                            <WrapPanel Orientation="Vertical" VerticalAlignment="Center">
+                                <TextBlock x:Name="tem19" Text="Вопросительные слова" FontSize="{Binding s}" MouseDown="tem19_MouseDown"></TextBlock>
+                            </WrapPanel>
+                        </WrapPanel>
+                    </StackPanel>
+                </ScrollViewer>
+            </StackPanel>
+            <Image Source="img/Выход.png" Width="50" Margin="1700,-1600,0,0" MouseDown="Image_MouseDown"></Image>
+        </WrapPanel>
+    </Grid>
+</Window>

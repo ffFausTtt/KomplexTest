@@ -1,0 +1,39 @@
+﻿<Window x:Class="test.Teacher"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:test"
+        mc:Ignorable="d"
+         Icon="img/иконка.ico"
+        Title="enGuide" Height="300" Width="300">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Логин"></TextBlock>
+        <TextBox x:Name="log" Width="200"></TextBox>
+            <TextBlock Text="Пароль"></TextBlock>
+            <TextBox x:Name="par" Width="200" Margin="0,0,0,7"></TextBox>
+            <Border BorderBrush="#FFFF8000"  BorderThickness="1,2,1,2" CornerRadius="10,3,10,3" Width="200" Height="40" Background="#FFFF8000">
+                <Button Content="Войти" Click="Button_Click" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black"></Button>
+            </Border>
+        </StackPanel>
+        
+    </Grid>
+</Window>
